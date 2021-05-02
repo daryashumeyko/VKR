@@ -24,6 +24,10 @@
             android:name=".MainActivity"
             android:label="ActivityEntry">
         </activity>
+        <activity
+            android:name=".ui.registration.RegistrationView"
+            android:label="Registration">
+        </activity>
     </application>
 
 </manifest>

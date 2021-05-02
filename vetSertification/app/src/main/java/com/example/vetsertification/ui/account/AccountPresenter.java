@@ -51,6 +51,7 @@ public class AccountPresenter {
         }
 
         public void signUp() {
+            view.startRegistrationActivity();
             //todo сделать переход на страницу регистрации
         }
     }

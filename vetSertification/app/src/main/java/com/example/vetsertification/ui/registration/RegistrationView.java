@@ -1,41 +1,34 @@
-package com.example.vetsertification.ui.account;
-
-import android.accounts.Account;
+package com.example.vetsertification.ui.registration;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.v7.widget.LinearLayoutManager;
-//import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.List;
-
-import com.example.vetsertification.MainActivity;
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.registration.RegistrationView;
-//import ru.startandroid.mvpsample.R;
-//import ru.startandroid.mvpsample.common.User;
-//import ru.startandroid.mvpsample.common.UserAdapter;
+import com.example.vetsertification.ui.account.AccountView;
+import com.example.vetsertification.ui.registration.*;
 
-public class AccountView extends AppCompatActivity{
-   // private UserAdapter userAdapter;
+public class RegistrationView extends AppCompatActivity {
 
     private EditText Email;
+    private EditText Name;
+    private EditText Address;
+    private EditText Phone;
+    private EditText Birthday;
     private EditText Password;
     private TextView Message;
     private ProgressDialog progressDialog;
 
-    private AccountPresenter presenter;
+    private RegistrationPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.myaccount);
+        setContentView(R.layout.registration);
         init();
     }
 
@@ -43,18 +36,15 @@ public class AccountView extends AppCompatActivity{
 
         Email = (EditText) findViewById(R.id.email);
         Password = (EditText) findViewById(R.id.password);
+        Name = (EditText) findViewById(R.id.name);
+        Address = (EditText) findViewById(R.id.address);
+        Birthday = (EditText) findViewById(R.id.birthday);
+        Phone = (EditText) findViewById(R.id.phone);
 
-        findViewById(R.id.signIn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.signIn();
-            }
-        });
-
-        findViewById(R.id.signUp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.signUp();
+                presenter.register();
             }
         });
 
@@ -69,17 +59,22 @@ public class AccountView extends AppCompatActivity{
 
 
         DbHelper dbHelper = new DbHelper(this);*/
-        AccountModel accountModel = new AccountModel();
-        presenter = new AccountPresenter(accountModel);
+        RegistrationModel registrationModel = new RegistrationModel();
+        presenter = new RegistrationPresenter(registrationModel);
         presenter.attachView(this);
         presenter.viewIsReady();
     }
 
-    public AccountData getAccountData() {
-        AccountData accountData = new AccountData();
-        accountData.setEmail(Email.getText().toString());
-        accountData.setPassword(Password.getText().toString());
-        return accountData;
+    public RegistrationData getRegistrationData() {
+        RegistrationData registrationData = new RegistrationData();
+        registrationData.setEmail(Email.getText().toString());
+        registrationData.setPassword(Password.getText().toString());
+        registrationData.setName(Name.getText().toString());
+        registrationData.setAddress(Address.getText().toString());
+        //registrationData.setBirthday(Birthday.().toString());
+        //registrationData.setPhone(Phone.().toString());
+        //todo изменить тип на др и телефона
+        return registrationData;
     }
 
     public void showMessage(String text) {
@@ -87,13 +82,9 @@ public class AccountView extends AppCompatActivity{
         Message.setText(text);
     }
 
-    public void startMainActivity(){
+    //переход на страницу авторизации после прохождения регистрации
+    public void startAccountActivity(){
         Intent intent = new Intent(this, AccountView.class);
-        startActivity(intent);
-    }
-
-    public void startRegistrationActivity(){
-        Intent intent = new Intent(this, RegistrationView.class);
         startActivity(intent);
     }
 
