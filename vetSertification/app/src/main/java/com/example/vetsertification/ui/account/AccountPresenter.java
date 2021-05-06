@@ -44,7 +44,7 @@ public class AccountPresenter {
                     if (!result)
                         view.showMessage("Неверный email или пароль");
                     else{
-                        view.startMainActivity();
+                        view.startUserMainActivity();
                     }; //todo сделать переход на страницу авторизованного пользователя
                 }
             });

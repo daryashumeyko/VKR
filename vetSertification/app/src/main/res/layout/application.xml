@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="ЗАЯВКА НА ПОЛУЧЕНИЕ ВСД"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ОБЩИЕ СВЕДЕНИЯ"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textFromCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Страна отправления:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/fromCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textToCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Страна назначения:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/toCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textDateOfExport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата экспорта:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/dateOfExport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="СВЕДЕНИЯ О ВЛАДЕЛЬЦЕ"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ФИО:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата рождения:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Номер телефона:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Адрес:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:fontFamily="casual"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:textColor="#817979"
+            android:background="@drawable/fields"
+            android:inputType="text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="СВЕДЕНИЯ О ТРАНСПОРТНОМ СРЕДСТВЕ"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textTypeOfTransport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Тип транспортного средства:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/typeOfTransport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textNumberOfTransport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Номер транспортного средства:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/numberOfTransport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="СВЕДЕНИЯ О ЖИВОТНОМ"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textKindOfAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вид животного:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/kindOfAnimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textPetName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Кличка:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/petName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textBreed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Порода:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/breed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Пол:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Женский"
+                android:fontFamily="casual"
+                android:textColor="#63EDFF" />
+
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Мужской"
+                android:fontFamily="casual"
+                android:textColor="#63EDFF" />
+        </RadioGroup>
+        
+        <TextView
+            android:id="@+id/textPetBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата рождения:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/petBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textPetAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Адрес:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/petAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textCountryOfOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Страна происхождения:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/countryOfOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textIdentificationSystem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Система идентификации:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/identificationSystem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textDateOfChipping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата чипирования:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/dateOfChipping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Номер чипа:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="СВЕДЕНИЯ О ЛАБОРАТОРНЫХ ИССЛЕДОВАНИЯХ"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textMethodOfResearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Метод исследования:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/methodOfResearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата проведения исследования:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textNameOfDesease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Наименование болезни:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/nameOfDesease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Результат:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="СВЕДЕНИЯ О ВАКЦИНАЦИИ"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textNameOfVaccine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Название вакцины:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/nameOfVaccine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textDate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дата проведения вакцинации:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/date2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textNameOfDesease2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Наименование болезни:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/nameOfDesease2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textSeriesOfVaccine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Серия вакцины:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/seriesOfVaccine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/textShelfLifeVaccine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Срок годности вакцины:*"
+            android:fontFamily="casual"
+            android:layout_marginTop="3dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/shelfLifeVaccine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="20sp"
+            android:textColor="#817979"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="casual"
+            android:text=""
+            android:textColor="#FF3030"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:padding="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Создать аккаунт"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+</ScrollView>

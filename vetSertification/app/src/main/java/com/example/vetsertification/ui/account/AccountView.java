@@ -18,6 +18,7 @@ import java.util.List;
 import com.example.vetsertification.MainActivity;
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.registration.RegistrationView;
+import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 //import ru.startandroid.mvpsample.R;
 //import ru.startandroid.mvpsample.common.User;
 //import ru.startandroid.mvpsample.common.UserAdapter;
@@ -87,8 +88,8 @@ public class AccountView extends AppCompatActivity{
         Message.setText(text);
     }
 
-    public void startMainActivity(){
-        Intent intent = new Intent(this, AccountView.class);
+    public void startUserMainActivity(){
+        Intent intent = new Intent(this, UserMainPageView.class);
         startActivity(intent);
     }
 

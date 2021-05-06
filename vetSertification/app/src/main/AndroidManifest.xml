@@ -28,6 +28,10 @@
             android:name=".ui.registration.RegistrationView"
             android:label="Registration">
         </activity>
+        <activity
+            android:name=".ui.userMainPage.UserMainPageView"
+            android:label="UserMainPage">
+        </activity>
     </application>
 
 </manifest>
