@@ -393,7 +393,7 @@
                 android:fontFamily="casual"
                 android:textColor="#63EDFF" />
         </RadioGroup>
-        
+
         <TextView
             android:id="@+id/textPetBirthday"
             android:layout_width="match_parent"
@@ -755,14 +755,14 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/register"
+            android:id="@+id/doApp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/button"
             android:padding="20sp"
             android:layout_marginTop="10dp"
-            android:text="Создать аккаунт"
+            android:text="Создать заявку"
             android:fontFamily="casual"
             android:textStyle="bold"
             android:textColor="#000000"

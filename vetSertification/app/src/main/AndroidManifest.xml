@@ -32,6 +32,14 @@
             android:name=".ui.userMainPage.UserMainPageView"
             android:label="UserMainPage">
         </activity>
+        <activity
+            android:name=".ui.application.ApplicationView"
+            android:label="Application">
+        </activity>
+        <activity
+            android:name=".ui.instruction.InstructionView"
+            android:label="UserMainPage">
+        </activity>
     </application>
 
 </manifest>

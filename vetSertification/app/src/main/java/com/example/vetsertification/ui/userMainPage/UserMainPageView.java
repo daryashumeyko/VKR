@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.account.*;
+import com.example.vetsertification.ui.application.ApplicationView;
 import com.example.vetsertification.ui.instruction.*;
 import com.example.vetsertification.ui.registration.*;
 import com.example.vetsertification.ui.userMainPage.*;
@@ -40,13 +41,13 @@ public class UserMainPageView extends AppCompatActivity {
                 presenter.instruction();
             }
         });
-        /*findViewById(R.id.application).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.application).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.application();
             }
         });
-        findViewById(R.id.recordVetOff).setOnClickListener(new View.OnClickListener() {
+        /*findViewById(R.id.recordVetOff).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.recordVetOff();
@@ -75,12 +76,12 @@ public class UserMainPageView extends AppCompatActivity {
         Intent intent = new Intent(this, InstructionView.class);
         startActivity(intent);
     }
-    /*//переход на страницу создания заявки на получение ВСД
+    //переход на страницу создания заявки на получение ВСД
     public void startApplicationActivity(){
         Intent intent = new Intent(this, ApplicationView.class);
         startActivity(intent);
     }
-    //переход на страницу создания записи в вет.управление
+    /*//переход на страницу создания записи в вет.управление
     public void startRecVetOffActivity(){
         Intent intent = new Intent(this, RecVetOffView.class);
         startActivity(intent);

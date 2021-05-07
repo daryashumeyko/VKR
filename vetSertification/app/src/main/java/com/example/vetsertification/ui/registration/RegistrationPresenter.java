@@ -28,12 +28,9 @@ public class RegistrationPresenter {
 
     public void register() {
         RegistrationData registrationData = view.getRegistrationData();
-        if (TextUtils.isEmpty(registrationData.getEmail()) ||
-                TextUtils.isEmpty(registrationData.getPassword()) ||
-                //TextUtils.isEmpty(registrationData.getPhone()) ||todo исправить
-                TextUtils.isEmpty(registrationData.getName()) ||
-                TextUtils.isEmpty(registrationData.getAddress()) )
-                //TextUtils.isEmpty(registrationData.getBirthday()) //todo исправить
+        if (TextUtils.isEmpty(registrationData.getEmail()) || TextUtils.isEmpty(registrationData.getPassword())
+                /*|| TextUtils.isEmpty(registrationData.getPhone()) || TextUtils.isEmpty(registrationData.getName())
+                || TextUtils.isEmpty(registrationData.getAddress()) || TextUtils.isEmpty(registrationData.getBirthday()) */)
                 {
             view.showMessage("Заполните все поля");
             return;

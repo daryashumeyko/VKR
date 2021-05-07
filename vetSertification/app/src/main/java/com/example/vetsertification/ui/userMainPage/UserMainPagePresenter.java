@@ -39,14 +39,10 @@ public class UserMainPagePresenter {
     }*/
 
     public void instruction() {
-        InstructionData instructionData = view.getInstructionData();
-        view.showProgress();
-        model.instruction(instructionData, new UserMainPageModel.UserMainPageCallback(){
-            @Override
-            public void onSeeInstruction(Boolean result) {
-                view.hideProgress();
-                view.startSeeInstruction();
-            };
-        });
-    }
+        view.startSeeInstruction();
+    };
+
+    public void application() {
+        view.startApplicationActivity();
+    };
 }

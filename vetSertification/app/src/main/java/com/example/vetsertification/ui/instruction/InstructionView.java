@@ -16,7 +16,6 @@ public class InstructionView extends AppCompatActivity {
     // private UserAdapter userAdapter;
 
     private EditText Country;
-    //private EditText Password;
     private TextView Message;
     private ProgressDialog progressDialog;
 

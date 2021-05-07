@@ -13,12 +13,8 @@ public class UserMainPageModel {
         UserMainPageTask.execute((Runnable) accountData);
     }
 
-    public void instruction(InstructionData instructionData, UserMainPageCallback instructionCallback) {
-    }
-
     interface UserMainPageCallback {
         void onSeeAccount(Boolean result);
-        void onSeeInstruction(Boolean result);
     }
 
     class UserMainPageTask extends AsyncTask<RegistrationData, Void, Boolean> {
@@ -48,7 +44,6 @@ public class UserMainPageModel {
         protected void onPostExecute(Boolean success) {
             if (callback != null) {
                 callback.onSeeAccount(success);
-                callback.onSeeInstruction(success);
             }
         }
     }
