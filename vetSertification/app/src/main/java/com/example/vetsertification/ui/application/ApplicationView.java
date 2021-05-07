@@ -1,22 +1,14 @@
 package com.example.vetsertification.ui.application;
 
-import android.app.Application;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.icu.text.BidiRun;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.account.*;
-import com.example.vetsertification.ui.registration.*;
 import com.example.vetsertification.ui.userMainPage.*;
-
-import java.util.Date;
 
 public class ApplicationView extends AppCompatActivity {
 

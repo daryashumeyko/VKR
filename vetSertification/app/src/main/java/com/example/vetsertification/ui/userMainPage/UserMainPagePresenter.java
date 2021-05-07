@@ -45,4 +45,12 @@ public class UserMainPagePresenter {
     public void application() {
         view.startApplicationActivity();
     };
+
+    public void recVetOff() {
+        view.startRecVetOffActivity();
+    };
+
+    public void recRosselchoz() {
+        view.startRecRosselchozActivity();
+    };
 }

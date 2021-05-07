@@ -1,11 +1,6 @@
 package com.example.vetsertification.ui.account;
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.os.AsyncTask;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
+import android.os.AsyncTask;
 
 public class AccountModel {
     /*public UsersModel(DbHelper dbHelper) {

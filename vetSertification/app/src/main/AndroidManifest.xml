@@ -4,14 +4,21 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_picture"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".ui.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+        </activity>
+
         <activity
-            android:name=".ui.account.AccountView"
-            android:label="@string/app_name"
+            android:name=".ui.account.AccountView" android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +29,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="ActivityEntry">
+            android:label="MainActivity">
         </activity>
         <activity
             android:name=".ui.registration.RegistrationView"
@@ -39,6 +46,14 @@
         <activity
             android:name=".ui.instruction.InstructionView"
             android:label="UserMainPage">
+        </activity>
+        <activity
+            android:name=".ui.recordvetoff.RecordVetOffView"
+            android:label="RecordVetOff">
+        </activity>
+        <activity
+            android:name=".ui.recordrosselchoz.RecordRosselchozView"
+            android:label="RecordRosselchoz">
         </activity>
     </application>
 

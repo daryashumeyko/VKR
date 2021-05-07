@@ -1,4 +1,4 @@
-package com.example.vetsertification.ui.account;
+package com.example.vetsertification.ui.recordvetoff;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,53 +11,50 @@ import com.example.vetsertification.R;
 import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
-public class AccountView extends AppCompatActivity{
-   // private UserAdapter userAdapter;
+public class RecordVetOffView extends AppCompatActivity {
+    // private UserAdapter userAdapter;
 
-    private EditText Email;
-    private EditText Password;
+    private EditText VetOff;
+    private EditText Date;
+    private EditText Time;
     private TextView Message;
+
     private ProgressDialog progressDialog;
 
-    private AccountPresenter presenter;
+    private RecordVetOffPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.myaccount);
+        setContentView(R.layout.rec_vet_off);
         init();
     }
 
     private void init() {
 
-        Email = (EditText) findViewById(R.id.email);
-        Password = (EditText) findViewById(R.id.password);
+        VetOff = (EditText) findViewById(R.id.vetOff);
+        Date = (EditText) findViewById(R.id.date);
+        Time = (EditText) findViewById(R.id.time);
 
-        findViewById(R.id.signIn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.doRecVetOff).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.signIn();
+                presenter.recVetOff();
             }
         });
 
-        findViewById(R.id.signUp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.signUp();
-            }
-        });
-
-        AccountModel accountModel = new AccountModel();
-        presenter = new AccountPresenter(accountModel);
+        RecordVetOffModel recordVetOffModel = new RecordVetOffModel();
+        presenter = new RecordVetOffPresenter(recordVetOffModel);
         presenter.attachView(this);
         presenter.viewIsReady();
     }
 
-    public AccountData getAccountData() {
-        AccountData accountData = new AccountData();
-        accountData.setEmail(Email.getText().toString());
-        accountData.setPassword(Password.getText().toString());
-        return accountData;
+    public RecordVetOffData getRecordVetOffData() {
+        RecordVetOffData recordVetOffData = new RecordVetOffData();
+        recordVetOffData.setVetOff(VetOff.getText().toString());
+        //recordVetOffData.setDate(Date.getText().toString());
+        //recordVetOffData.setTime(Time.getText().toString());
+        return recordVetOffData;
     }
 
     public void showMessage(String text) {

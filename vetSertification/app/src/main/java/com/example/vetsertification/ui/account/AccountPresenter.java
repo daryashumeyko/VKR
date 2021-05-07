@@ -1,14 +1,7 @@
 package com.example.vetsertification.ui.account;
-import android.content.ContentValues;
-import android.content.Intent;
+
 import android.text.TextUtils;
 
-import java.util.List;
-
-import com.example.vetsertification.MainActivity;
-import com.example.vetsertification.R;
-//import ru.startandroid.mvpsample.common.User;
-//import ru.startandroid.mvpsample.common.UserTable;
 public class AccountPresenter {
 
         private AccountView view;

@@ -2,11 +2,6 @@ package com.example.vetsertification.ui.application;
 
 import android.text.TextUtils;
 
-import com.example.vetsertification.ui.account.*;
-import com.example.vetsertification.ui.application.*;
-
-import java.util.Date;
-
 public class ApplicationPresenter {
 
     private ApplicationView view;
@@ -32,19 +27,19 @@ public class ApplicationPresenter {
 
         ApplicationData applicationData = view.getApplicationData();
         if (TextUtils.isEmpty(applicationData.getFromCountry()) || TextUtils.isEmpty(applicationData.getToCountry())
-               /* || TextUtils.isEmpty(applicationData.getDateOfExport()) || TextUtils.isEmpty(applicationData.getName())
-                || TextUtils.isEmpty(applicationData.getBirthday()) || TextUtils.isEmpty(applicationData.getEmail())
+                || TextUtils.isEmpty((CharSequence) applicationData.getDateOfExport()) || TextUtils.isEmpty(applicationData.getName())
+                || TextUtils.isEmpty((CharSequence) applicationData.getBirthday()) || TextUtils.isEmpty(applicationData.getEmail())
                 || TextUtils.isEmpty(applicationData.getPhone()) || TextUtils.isEmpty(applicationData.getAddress())
                 || TextUtils.isEmpty(applicationData.getTypeOfTransport()) || TextUtils.isEmpty(applicationData.getNumberOfTransport())
                 || TextUtils.isEmpty(applicationData.getKindOfAnimal()) || TextUtils.isEmpty(applicationData.getPetName())
-                || TextUtils.isEmpty(applicationData.getBreed()) || TextUtils.isEmpty(applicationData.getPetBirthday())
+                || TextUtils.isEmpty(applicationData.getBreed()) || TextUtils.isEmpty((CharSequence) applicationData.getPetBirthday())
                 || TextUtils.isEmpty(applicationData.getPetAddress()) || TextUtils.isEmpty(applicationData.getCountryOfOrigin())
-                || TextUtils.isEmpty(applicationData.getIdentificationSystem()) || TextUtils.isEmpty(applicationData.getDateOfChipping())
+                || TextUtils.isEmpty(applicationData.getIdentificationSystem()) || TextUtils.isEmpty((CharSequence) applicationData.getDateOfChipping())
                 || TextUtils.isEmpty(applicationData.getNumber()) || TextUtils.isEmpty(applicationData.getMethodOfResearch())
-                || TextUtils.isEmpty(applicationData.getDate()) || TextUtils.isEmpty(applicationData.getNameOfDesease())
+                || TextUtils.isEmpty((CharSequence) applicationData.getDate()) || TextUtils.isEmpty(applicationData.getNameOfDesease())
                 || TextUtils.isEmpty(applicationData.getResult()) || TextUtils.isEmpty(applicationData.getNameOfVaccine())
-                || TextUtils.isEmpty(applicationData.getDate2()) || TextUtils.isEmpty(applicationData.getNameOfDesease2())
-                || TextUtils.isEmpty(applicationData.getSeriesOfVaccine()) || TextUtils.isEmpty(applicationData.getShelfLifeVaccine())*/) {
+                || TextUtils.isEmpty((CharSequence) applicationData.getDate2()) || TextUtils.isEmpty(applicationData.getNameOfDesease2())
+                || TextUtils.isEmpty(applicationData.getSeriesOfVaccine()) || TextUtils.isEmpty((CharSequence) applicationData.getShelfLifeVaccine())) {
             view.showMessage("Заполните все поля");
             return;
         }

@@ -1,7 +1,5 @@
 package com.example.vetsertification.ui.account;
 
-import java.util.Date;
-
 public class AccountData {
 
     private String email;

@@ -6,11 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.instruction.*;
 
 public class InstructionView extends AppCompatActivity {
     // private UserAdapter userAdapter;

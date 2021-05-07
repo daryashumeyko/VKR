@@ -2,10 +2,6 @@ package com.example.vetsertification.ui.instruction;
 
 import android.text.TextUtils;
 
-import com.example.vetsertification.ui.account.AccountData;
-import com.example.vetsertification.ui.account.AccountModel;
-import com.example.vetsertification.ui.account.AccountView;
-
 public class InstructionPresenter {
 
     private InstructionView view;

@@ -1,10 +1,6 @@
 package com.example.vetsertification.ui.application;
 
-import android.app.Application;
 import android.os.AsyncTask;
-
-import com.example.vetsertification.ui.account.AccountData;
-import com.example.vetsertification.ui.account.AccountModel;
 
 public class ApplicationModel {
 

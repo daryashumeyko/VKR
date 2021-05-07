@@ -2,9 +2,6 @@ package com.example.vetsertification.ui.registration;
 
 import android.text.TextUtils;
 
-import com.example.vetsertification.ui.account.AccountModel;
-import com.example.vetsertification.ui.registration.*;
-
 public class RegistrationPresenter {
 
     private RegistrationView view;
@@ -29,8 +26,8 @@ public class RegistrationPresenter {
     public void register() {
         RegistrationData registrationData = view.getRegistrationData();
         if (TextUtils.isEmpty(registrationData.getEmail()) || TextUtils.isEmpty(registrationData.getPassword())
-                /*|| TextUtils.isEmpty(registrationData.getPhone()) || TextUtils.isEmpty(registrationData.getName())
-                || TextUtils.isEmpty(registrationData.getAddress()) || TextUtils.isEmpty(registrationData.getBirthday()) */)
+                || TextUtils.isEmpty(registrationData.getPhone()) || TextUtils.isEmpty(registrationData.getName())
+                || TextUtils.isEmpty(registrationData.getAddress()) || TextUtils.isEmpty((CharSequence) registrationData.getBirthday()))
                 {
             view.showMessage("Заполните все поля");
             return;

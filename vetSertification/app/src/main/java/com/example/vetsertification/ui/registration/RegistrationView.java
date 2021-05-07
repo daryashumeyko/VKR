@@ -5,12 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.account.AccountView;
-import com.example.vetsertification.ui.registration.*;
 
 public class RegistrationView extends AppCompatActivity {
 
@@ -48,17 +45,6 @@ public class RegistrationView extends AppCompatActivity {
             }
         });
 
-        /*LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-
-        userAdapter = new UserAdapter();
-
-        RecyclerView userList = (RecyclerView) findViewById(R.id.list);
-        userList.setLayoutManager(layoutManager);
-        userList.setAdapter(userAdapter);
-
-
-        DbHelper dbHelper = new DbHelper(this);*/
         RegistrationModel registrationModel = new RegistrationModel();
         presenter = new RegistrationPresenter(registrationModel);
         presenter.attachView(this);

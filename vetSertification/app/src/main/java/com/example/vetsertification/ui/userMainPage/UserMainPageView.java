@@ -4,16 +4,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.account.*;
 import com.example.vetsertification.ui.application.ApplicationView;
 import com.example.vetsertification.ui.instruction.*;
-import com.example.vetsertification.ui.registration.*;
-import com.example.vetsertification.ui.userMainPage.*;
+import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozView;
+import com.example.vetsertification.ui.recordvetoff.RecordVetOffView;
 
 public class UserMainPageView extends AppCompatActivity {
 
@@ -47,18 +43,18 @@ public class UserMainPageView extends AppCompatActivity {
                 presenter.application();
             }
         });
-        /*findViewById(R.id.recordVetOff).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.recordVetOff).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.recordVetOff();
+                presenter.recVetOff();
             }
         });
         findViewById(R.id.recordRosselchoz).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.recordRosselchoz();
+                presenter.recRosselchoz();
             }
-        });*/
+        });
 
         UserMainPageModel userMainPageModel = new UserMainPageModel();
         presenter = new UserMainPagePresenter(userMainPageModel);
@@ -81,27 +77,15 @@ public class UserMainPageView extends AppCompatActivity {
         Intent intent = new Intent(this, ApplicationView.class);
         startActivity(intent);
     }
-    /*//переход на страницу создания записи в вет.управление
+    //переход на страницу создания записи в вет.управление
     public void startRecVetOffActivity(){
-        Intent intent = new Intent(this, RecVetOffView.class);
+        Intent intent = new Intent(this, RecordVetOffView.class);
         startActivity(intent);
     }
     //переход на страницу создания записи в Россельхознадзор
     public void startRecRosselchozActivity(){
-        Intent intent = new Intent(this, RecRosselchozView.class);
+        Intent intent = new Intent(this, RecordRosselchozView.class);
         startActivity(intent);
-    }*/
-
-    public RegistrationData getAccountData() {
-        RegistrationData accountData = new RegistrationData();
-        //todo реализовать получение данных пользователя для просмотра данных его аккаунта
-        return accountData;
-    }
-
-    public InstructionData getInstructionData() {
-        InstructionData instructionData = new InstructionData();
-        //todo реализовать получение данных пользователя для просмотра данных его аккаунта
-        return instructionData;
     }
 
     public void showProgress() {

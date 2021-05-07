@@ -2,8 +2,6 @@ package com.example.vetsertification.ui.instruction;
 
 import android.os.AsyncTask;
 
-import com.example.vetsertification.ui.instruction.*;
-
 public class InstructionModel {
 
     public void instruction(InstructionData instructionData, InstructionModel.InstructionCallback callback) {

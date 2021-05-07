@@ -49,7 +49,7 @@
             android:id="@+id/fromCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -72,7 +72,7 @@
             android:id="@+id/toCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -95,7 +95,7 @@
             android:id="@+id/dateOfExport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -128,7 +128,7 @@
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -151,7 +151,7 @@
             android:id="@+id/birthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -174,7 +174,7 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -197,7 +197,7 @@
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -220,7 +220,7 @@
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:padding="10sp"
             android:fontFamily="casual"
             android:ems="10"
             android:layout_marginTop="10dp"
@@ -257,7 +257,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -279,7 +279,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -311,7 +311,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -333,7 +333,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -355,7 +355,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -412,7 +412,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -434,7 +434,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -456,7 +456,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -478,7 +478,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -500,7 +500,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -522,7 +522,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -554,7 +554,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -576,7 +576,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -598,7 +598,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -620,7 +620,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -652,7 +652,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -674,7 +674,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -696,7 +696,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -718,7 +718,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 
@@ -740,7 +740,7 @@
             android:fontFamily="casual"
             android:layout_marginTop="10dp"
             android:background="@drawable/fields"
-            android:padding="20sp"
+            android:padding="10sp"
             android:textColor="#817979"
             android:textSize="18sp"/>
 

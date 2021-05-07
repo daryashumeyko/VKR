@@ -1,4 +1,4 @@
-package com.example.vetsertification.ui.account;
+package com.example.vetsertification.ui.recordrosselchoz;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -8,56 +8,51 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
-public class AccountView extends AppCompatActivity{
-   // private UserAdapter userAdapter;
+public class RecordRosselchozView extends AppCompatActivity {
 
-    private EditText Email;
-    private EditText Password;
+    private EditText Rosselchoz;
+    private EditText Date;
+    private EditText Time;
     private TextView Message;
+
     private ProgressDialog progressDialog;
 
-    private AccountPresenter presenter;
+    private RecordRosselchozPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.myaccount);
+        setContentView(R.layout.rec_rosselchoz);
         init();
     }
 
     private void init() {
 
-        Email = (EditText) findViewById(R.id.email);
-        Password = (EditText) findViewById(R.id.password);
+        Rosselchoz = (EditText) findViewById(R.id.rosselchoz);
+        Date = (EditText) findViewById(R.id.date);
+        Time = (EditText) findViewById(R.id.time);
 
-        findViewById(R.id.signIn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.doRecRosselchoz).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.signIn();
+                presenter.recRosselchoz();
             }
         });
 
-        findViewById(R.id.signUp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.signUp();
-            }
-        });
-
-        AccountModel accountModel = new AccountModel();
-        presenter = new AccountPresenter(accountModel);
+        RecordRosselchozModel recordRosselchozModel = new RecordRosselchozModel();
+        presenter = new RecordRosselchozPresenter(recordRosselchozModel);
         presenter.attachView(this);
         presenter.viewIsReady();
     }
 
-    public AccountData getAccountData() {
-        AccountData accountData = new AccountData();
-        accountData.setEmail(Email.getText().toString());
-        accountData.setPassword(Password.getText().toString());
-        return accountData;
+    public RecordRosselchozData getRecordRosselchozData() {
+        RecordRosselchozData recordRosselchozData = new RecordRosselchozData();
+        recordRosselchozData.setRosselchoz(Rosselchoz.getText().toString());
+        //recordVetOffData.setDate(Date.getText().toString());
+        //recordVetOffData.setTime(Time.getText().toString());
+        return recordRosselchozData;
     }
 
     public void showMessage(String text) {
@@ -67,11 +62,6 @@ public class AccountView extends AppCompatActivity{
 
     public void startUserMainActivity(){
         Intent intent = new Intent(this, UserMainPageView.class);
-        startActivity(intent);
-    }
-
-    public void startRegistrationActivity(){
-        Intent intent = new Intent(this, RegistrationView.class);
         startActivity(intent);
     }
 
