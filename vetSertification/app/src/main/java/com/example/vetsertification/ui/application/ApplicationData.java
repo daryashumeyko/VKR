@@ -11,7 +11,7 @@ public class ApplicationData {
     private String name;
     private Date birthday;
     private String email;
-    private int phone;
+    private String phone;
     private String address;
 
     private String typeOfTransport;
@@ -27,7 +27,7 @@ public class ApplicationData {
     private String countryOfOrigin;
     private String identificationSystem;
     private Date dateOfChipping;
-    private int number;
+    private String number;
 
     private String methodOfResearch;
     private Date date;
@@ -64,11 +64,11 @@ public class ApplicationData {
         this.name = name;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -184,11 +184,11 @@ public class ApplicationData {
         this.dateOfChipping = dateOfChipping;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

@@ -7,7 +7,7 @@ public class RegistrationData {
     private String password;
     private String name;
     private Date birthday;
-    private int phone;
+    private String phone;
     private String address;
 
     public String getName() {
@@ -41,6 +41,7 @@ public class RegistrationData {
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
+
     public String getAddress() {
         return address;
     }
@@ -49,11 +50,11 @@ public class RegistrationData {
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 }

@@ -24,8 +24,8 @@ public class RecordVetOffPresenter {
 
     public void recVetOff() {
         RecordVetOffData recordVetOffData = view.getRecordVetOffData();
-        if (TextUtils.isEmpty(recordVetOffData.getVetOff()) /*||
-                TextUtils.isEmpty(recordVetOffData.getDate()) || TextUtils.isEmpty(recordVetOffData.getTime())*/) {
+        if (TextUtils.isEmpty(recordVetOffData.getVetOff()) ||
+                TextUtils.isEmpty((CharSequence) recordVetOffData.getDate()) || TextUtils.isEmpty((CharSequence) recordVetOffData.getTime())) {
             view.showMessage("Заполните все поля");
             return;
         }

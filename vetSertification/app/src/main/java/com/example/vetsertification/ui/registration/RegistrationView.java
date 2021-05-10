@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
+import com.example.vetsertification.ui.RegexMaskTextWatcher;
 import com.example.vetsertification.ui.account.AccountView;
 
 public class RegistrationView extends AppCompatActivity {
@@ -32,11 +33,15 @@ public class RegistrationView extends AppCompatActivity {
     private void init() {
 
         Email = (EditText) findViewById(R.id.email);
+        Email.addTextChangedListener(new RegexMaskTextWatcher(Email, "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}\\@[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})+"));
+        //todo подобрать выражение для проверки
         Password = (EditText) findViewById(R.id.password);
         Name = (EditText) findViewById(R.id.name);
         Address = (EditText) findViewById(R.id.address);
         Birthday = (EditText) findViewById(R.id.birthday);
         Phone = (EditText) findViewById(R.id.phone);
+        Phone.addTextChangedListener(new RegexMaskTextWatcher(Phone, "(\\+[0-9]+[\\- \\.]*)?(\\([0-9]+\\)[\\- \\.]*)?([0-9][0-9\\- \\.]+[0-9])"));
+        //todo подобрать выражение для проверки
 
         findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
             @Override
