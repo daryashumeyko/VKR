@@ -44,7 +44,7 @@
             android:label="Application">
         </activity>
         <activity
-            android:name=".ui.instruction.InstructionView"
+            android:name=".ui.getinstruction.InstructionView"
             android:label="InstructionView">
         </activity>
         <activity

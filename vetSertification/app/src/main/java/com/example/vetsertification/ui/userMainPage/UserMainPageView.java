@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.application.ApplicationView;
-import com.example.vetsertification.ui.instruction.*;
+import com.example.vetsertification.ui.getinstruction.*;
 import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozView;
 import com.example.vetsertification.ui.recordvetoff.RecordVetOffView;
 

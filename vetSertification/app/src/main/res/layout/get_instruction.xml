@@ -1,87 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimary"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="ИНСТРУКЦИЯ ПО ПОЛУЧЕНИЮ ВСД"
-        android:fontFamily="casual"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textEmail"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Для получения подробной инструкции по оформлению ветеринарных сопроводительных документов выберите страну назначения из выпадающего списка:"
-        android:fontFamily="casual"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:gravity="center_vertical"
-        android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        android:textSize="18sp" />
+        android:background="@color/colorPrimary"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/spinnerCountry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:background="@drawable/fields"
-        android:padding="30sp"
-        android:textColor="#817979"
-        android:fontFamily="casual"
-        android:textSize="18sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selection" />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="ИНСТРУКЦИЯ ПО ПОЛУЧЕНИЯ ВСД"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/country"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="casual"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/fields"
-        android:padding="20sp"
-        android:textColor="#817979"
-        android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Для получения подробной инструкции по оформлению ветеринарных сопроводительных документов выберите страну назначения из выпадающего списка:"
+            android:fontFamily="casual"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="casual"
-        android:text=""
-        android:textColor="#FF3030"
-        android:textSize="14sp" />
+        <TextView
+            android:id="@+id/textCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Страна:"
+            android:fontFamily="casual"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/showInstruction"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/button"
-        android:padding="20sp"
-        android:layout_marginTop="20dp"
-        android:text="Показать инструкцию"
-        android:fontFamily="casual"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fields"
+            android:padding="10sp"
+            android:textColor="#817979"
+            android:inputType="textPassword"
+            android:textSize="18sp"/>
 
-</LinearLayout>
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="casual"
+            android:text=""
+            android:textColor="#FF3030"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/getInstruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:padding="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Показать инструкцию"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+</ScrollView>

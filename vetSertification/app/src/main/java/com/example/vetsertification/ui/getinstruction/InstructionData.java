@@ -1,4 +1,4 @@
-package com.example.vetsertification.ui.instruction;
+package com.example.vetsertification.ui.getinstruction;
 
 public class InstructionData {
     private String country;

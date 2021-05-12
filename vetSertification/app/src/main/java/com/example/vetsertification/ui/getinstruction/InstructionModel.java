@@ -1,9 +1,11 @@
-package com.example.vetsertification.ui.instruction;
+package com.example.vetsertification.ui.getinstruction;
 
 import android.os.AsyncTask;
 
-public class InstructionModel {
+import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozData;
+import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozModel;
 
+public class InstructionModel {
     public void instruction(InstructionData instructionData, InstructionModel.InstructionCallback callback) {
         InstructionModel.InstructionTask instructionTask = new InstructionModel.InstructionTask(callback);
         instructionTask.execute(instructionData);
@@ -23,16 +25,6 @@ public class InstructionModel {
 
         @Override
         protected Boolean doInBackground(InstructionData... params) {
-            /*List<User> users = new LinkedList<>();
-            Cursor cursor = dbHelper.getReadableDatabase().query(UserTable.TABLE, null, null, null, null, null, null);
-            while (cursor.moveToNext()) {
-                User user = new User();
-                user.setId(cursor.getLong(cursor.getColumnIndex(UserTable.COLUMN.ID)));
-                user.setName(cursor.getString(cursor.getColumnIndex(UserTable.COLUMN.NAME)));
-                user.setEmail(cursor.getString(cursor.getColumnIndex(UserTable.COLUMN.EMAIL)));
-                users.add(user);
-            }
-            cursor.close();*/
             //todo реализовать проверку наличия учетной записи
             return true;
         }

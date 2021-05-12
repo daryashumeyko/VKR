@@ -2,7 +2,7 @@ package com.example.vetsertification.ui.userMainPage;
 
 import android.text.TextUtils;
 
-import com.example.vetsertification.ui.instruction.InstructionData;
+import com.example.vetsertification.ui.getinstruction.InstructionData;
 import com.example.vetsertification.ui.registration.RegistrationData;
 import com.example.vetsertification.ui.userMainPage.*;
 

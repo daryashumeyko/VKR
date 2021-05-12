@@ -1,6 +1,10 @@
-package com.example.vetsertification.ui.instruction;
+package com.example.vetsertification.ui.getinstruction;
 
 import android.text.TextUtils;
+
+import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozData;
+import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozModel;
+import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozView;
 
 public class InstructionPresenter {
 
@@ -25,8 +29,9 @@ public class InstructionPresenter {
 
     public void instruction() {
         InstructionData instructionData = view.getInstructionData();
-        if (TextUtils.isEmpty(instructionData.getCountry())) {
-            view.showMessage("Выберите страну");
+        if (TextUtils.isEmpty(instructionData.getCountry()) /*||
+                TextUtils.isEmpty(instructionData.getDate()) || TextUtils.isEmpty(instructionData.getTime())*/) {
+            view.showMessage("Заполните все поля");
             return;
         }
         view.showProgress();
@@ -34,8 +39,8 @@ public class InstructionPresenter {
             @Override
             public void onInstruction(Boolean result) {
                 view.hideProgress();
-                view.startInstructionActivity();
-                };
+                view.startUserMainActivity();
+            }
         });
     }
 }
