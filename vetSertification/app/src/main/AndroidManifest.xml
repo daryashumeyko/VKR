@@ -45,7 +45,7 @@
         </activity>
         <activity
             android:name=".ui.instruction.InstructionView"
-            android:label="UserMainPage">
+            android:label="InstructionView">
         </activity>
         <activity
             android:name=".ui.recordvetoff.RecordVetOffView"

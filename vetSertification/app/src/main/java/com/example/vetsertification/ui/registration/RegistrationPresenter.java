@@ -1,6 +1,8 @@
 package com.example.vetsertification.ui.registration;
 
+import android.graphics.Color;
 import android.text.TextUtils;
+import android.widget.EditText;
 
 public class RegistrationPresenter {
 
@@ -32,13 +34,21 @@ public class RegistrationPresenter {
             view.showMessage("Заполните все поля");
             return;
         }
+        if ((registrationData.getEmailColor() == Color.parseColor("#ff808080")) ||
+            (registrationData.getPhoneColor() == Color.parseColor("#ff808080")) ||
+            (registrationData.getBirthdayColor() == Color.parseColor("#ff808080")))
+        {
+            view.showMessage("Данные, выделенные красным цветом, введены некорректны");
+            return;
+        }
+        //todo не работает проверка по цвету текста
         view.showProgress();
         model.register(registrationData, new RegistrationModel.RegisterCallback(){
             @Override
             public void onRegister(Boolean result) {
                 view.hideProgress();
                     view.startAccountActivity();
-                };
+            };
         });
     }
 }

@@ -34,14 +34,13 @@ public class RegistrationView extends AppCompatActivity {
 
         Email = (EditText) findViewById(R.id.email);
         Email.addTextChangedListener(new RegexMaskTextWatcher(Email, "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}\\@[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})+"));
-        //todo подобрать выражение для проверки
         Password = (EditText) findViewById(R.id.password);
         Name = (EditText) findViewById(R.id.name);
         Address = (EditText) findViewById(R.id.address);
         Birthday = (EditText) findViewById(R.id.birthday);
+        Birthday.addTextChangedListener(new RegexMaskTextWatcher(Birthday, "(0?[1-9]|[12][0-9]|3[01])([\\.\\\\\\/-])(0?[1-9]|1[012])\\2(((19|20)\\d\\d)|(\\d\\d))"));
         Phone = (EditText) findViewById(R.id.phone);
-        Phone.addTextChangedListener(new RegexMaskTextWatcher(Phone, "(\\+[0-9]+[\\- \\.]*)?(\\([0-9]+\\)[\\- \\.]*)?([0-9][0-9\\- \\.]+[0-9])"));
-        //todo подобрать выражение для проверки
+        Phone.addTextChangedListener(new RegexMaskTextWatcher(Phone, "((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{8,15}$"));
 
         findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,9 +61,16 @@ public class RegistrationView extends AppCompatActivity {
         registrationData.setPassword(Password.getText().toString());
         registrationData.setName(Name.getText().toString());
         registrationData.setAddress(Address.getText().toString());
-        //registrationData.setBirthday(Birthday.().toString());
-        //registrationData.setPhone(Phone.().toString());
-        //todo изменить тип на др и телефона
+        registrationData.setBirthday(Birthday.getText().toString());
+        registrationData.setPhone(Phone.getText().toString());
+        return registrationData;
+    }
+
+    public RegistrationData getTextColor() {
+        RegistrationData registrationData = new RegistrationData();
+        registrationData.setEmailColor(Email.getCurrentTextColor());
+        registrationData.setBirthdayColor(Birthday.getCurrentTextColor());
+        registrationData.setPhoneColor(Phone.getCurrentTextColor());
         return registrationData;
     }
 

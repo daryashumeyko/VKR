@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/colorPrimary"
@@ -33,6 +34,20 @@
         android:textColor="#000000"
         android:textSize="18sp" />
 
+    <Spinner
+        android:id="@+id/spinnerCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:background="@drawable/fields"
+        android:padding="30sp"
+        android:textColor="#817979"
+        android:fontFamily="casual"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selection" />
+
     <EditText
         android:id="@+id/country"
         android:layout_width="match_parent"
@@ -43,7 +58,6 @@
         android:background="@drawable/fields"
         android:padding="20sp"
         android:textColor="#817979"
-        android:inputType="textPassword"
         android:textSize="18sp"/>
 
     <TextView

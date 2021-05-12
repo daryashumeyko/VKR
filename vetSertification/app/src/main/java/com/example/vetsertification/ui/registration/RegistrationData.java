@@ -6,9 +6,37 @@ public class RegistrationData {
     private String email;
     private String password;
     private String name;
-    private Date birthday;
+    private String birthday;
     private String phone;
     private String address;
+
+    public int emailColor;
+    public int birthdayColor;
+    public int phoneColor;
+
+    public int getPhoneColor() {
+        return phoneColor;
+    }
+
+    public void setPhoneColor(int phoneColor) {
+        this.phoneColor = phoneColor;
+    }
+
+    public int getBirthdayColor() {
+        return birthdayColor;
+    }
+
+    public void setBirthdayColor(int birthdayColor) {
+        this.birthdayColor = birthdayColor;
+    }
+
+    public int getEmailColor() {
+        return emailColor;
+    }
+
+    public void setEmailColor(int emailColor) {
+        this.emailColor = emailColor;
+    }
 
     public String getName() {
         return name;
@@ -34,11 +62,11 @@ public class RegistrationData {
         this.password = password;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
