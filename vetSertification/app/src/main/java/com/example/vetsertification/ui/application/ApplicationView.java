@@ -4,13 +4,21 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.userMainPage.*;
 
-public class ApplicationView extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class ApplicationView extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     private EditText FromCountry;
     private EditText ToCountry;
@@ -58,27 +66,93 @@ public class ApplicationView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.application);
         init();
+
+        //Инициализируем элемент Spinner:
+        Spinner spinnerFromCountry = (Spinner) findViewById(R.id.spinnerFromCountry);
+        Spinner spinnerToCountry = (Spinner) findViewById(R.id.spinnerToCountry);
+        Spinner spinnerTypeOfTransport = (Spinner) findViewById(R.id.spinnerTypeOfTransport);
+        Spinner spinnerCountryOfOrigin = (Spinner) findViewById(R.id.spinnerCountryOfOrigin);
+        Spinner spinnerIdentificationSystem = (Spinner) findViewById(R.id.spinnerIdentificationSystem);
+
+        //Настраиваем слушатель нажатий Spinner(Click Listener):
+        spinnerFromCountry.setOnItemSelectedListener(this);
+        spinnerToCountry.setOnItemSelectedListener(this);
+        spinnerTypeOfTransport.setOnItemSelectedListener(this);
+        spinnerCountryOfOrigin.setOnItemSelectedListener(this);
+        spinnerIdentificationSystem.setOnItemSelectedListener(this);
+
+        //Создаем массив элементов выпадающего списка:
+        List<String> country = new ArrayList<String>();
+        country.add("Австралия"); country.add("Болгария"); country.add("Бразилия"); country.add("Вьетнам"); country.add("Германия"); country.add("Индонезия");
+        country.add("Китай"); country.add("Ливан"); country.add("Литва"); country.add("Мексика"); country.add("Норвегия"); country.add("ОАЭ");
+        country.add("Панама"); country.add("Парагвай"); country.add("Польша"); country.add("Португалия"); country.add("Российская Федерация");
+        country.add("Румыния"); country.add("Саудовская Аравия"); country.add("Сербия"); country.add("Сербия");
+        country.add("США"); country.add("Турция"); country.add("Узбекистан"); country.add("Финляндия"); country.add("Франция");
+        country.add("Хорватия"); country.add("Чехия"); country.add("Эстония"); country.add("ЮАР"); country.add("Япония");
+
+        //Создаем массив элементов выпадающего списка:
+        List<String> transport = new ArrayList<String>();
+        transport.add("Морской"); transport.add("Авиатранспортный"); transport.add("Речной"); transport.add("Железнодорожный"); transport.add("Автомобильный");
+
+        //Создаем массив элементов выпадающего списка:
+        List<String> identification = new ArrayList<String>();
+        identification.add("Чипирование"); identification.add("Клеймение");
+
+        //Создаем для spinner адаптер:
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, country);
+        //Настраиваем внешний вид выпадающего списка, используя готовый системный шаблон:
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Присоединяем адаптер данных к spinner:
+        spinnerFromCountry.setAdapter(dataAdapter);
+        spinnerToCountry.setAdapter(dataAdapter);
+        spinnerCountryOfOrigin.setAdapter(dataAdapter);
+
+        //Создаем для spinnerTypeOfTransport адаптер:
+        ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, transport);
+        //Настраиваем внешний вид выпадающего списка, используя готовый системный шаблон:
+        dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Присоединяем адаптер данных к spinner:
+        spinnerTypeOfTransport.setAdapter(dataAdapter2);
+
+        //Создаем для spinnerIdentificationSystem адаптер:
+        ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, identification);
+        //Настраиваем внешний вид выпадающего списка, используя готовый системный шаблон:
+        dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Присоединяем адаптер данных к spinner:
+        spinnerIdentificationSystem.setAdapter(dataAdapter3);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        //Выбираем элемент выпадающего списка:
+        String item = parent.getItemAtPosition(position).toString();
+        //Показываем выбранный элемент с помощью Toast сообщения:
+        Toast.makeText(parent.getContext(), "Выбрано: " + item, Toast.LENGTH_LONG).show();
+    }
+
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO Auto-generated method stub
     }
 
     private void init() {
 
-        FromCountry = (EditText) findViewById(R.id.fromCountry);
-        ToCountry = (EditText) findViewById(R.id.toCountry);
+        //FromCountry = (EditText) findViewById(R.id.fromCountry);
+        //ToCountry = (EditText) findViewById(R.id.toCountry);
         DateOfExport = (EditText) findViewById(R.id.dateOfExport);
         Name = (EditText) findViewById(R.id.name);
         Birthday = (EditText) findViewById(R.id.birthday);
         Email = (EditText) findViewById(R.id.email);
         Phone = (EditText) findViewById(R.id.phone);
         Address = (EditText) findViewById(R.id.address);
-        TypeOfTransport = (EditText) findViewById(R.id.typeOfTransport);
+        //TypeOfTransport = (EditText) findViewById(R.id.typeOfTransport);
         NumberOfTransport = (EditText) findViewById(R.id.numberOfTransport);
         KindOfAnimal = (EditText) findViewById(R.id.kindOfAnimal);
         PetName = (EditText) findViewById(R.id.petName);
         Breed = (EditText) findViewById(R.id.breed);
         PetBirthday = (EditText) findViewById(R.id.petBirthday);
         PetAddress = (EditText) findViewById(R.id.petAddress);
-        CountryOfOrigin = (EditText) findViewById(R.id.countryOfOrigin);
-        IdentificationSystem = (EditText) findViewById(R.id.identificationSystem);
+        //CountryOfOrigin = (EditText) findViewById(R.id.countryOfOrigin);
+        //IdentificationSystem = (EditText) findViewById(R.id.identificationSystem);
         DateOfChipping = (EditText) findViewById(R.id.dateOfChipping);
         Number = (EditText) findViewById(R.id.number);
         MethodOfResearch = (EditText) findViewById(R.id.methodOfResearch);

@@ -38,32 +38,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textCountry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Страна:"
-            android:fontFamily="casual"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:gravity="center_vertical"
-            android:layout_marginTop="20dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/country"
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="casual"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/fields"
             android:padding="10sp"
             android:textColor="#817979"
             android:inputType="textPassword"
-            android:textSize="18sp"/>
-
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/message"
@@ -88,6 +75,5 @@
             android:textStyle="bold"
             android:textColor="#000000"
             android:textSize="18sp"/>
-
     </LinearLayout>
 </ScrollView>

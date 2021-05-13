@@ -45,18 +45,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/fromCountry"
+        <Spinner
+            android:id="@+id/spinnerFromCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:fontFamily="casual"
             android:ems="10"
-            android:layout_marginTop="10dp"
-            android:textColor="#817979"
+            android:fontFamily="casual"
+            android:layout_marginTop="20dp"
             android:background="@drawable/fields"
-            android:inputType="text"
-            android:textSize="18sp" />
+            android:padding="10sp"
+            android:textColor="#817979"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textToCountry"
@@ -68,18 +69,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/toCountry"
+        <Spinner
+            android:id="@+id/spinnerToCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10sp"
-            android:fontFamily="casual"
             android:ems="10"
-            android:layout_marginTop="10dp"
-            android:textColor="#817979"
+            android:fontFamily="casual"
+            android:layout_marginTop="20dp"
             android:background="@drawable/fields"
-            android:inputType="text"
-            android:textSize="18sp" />
+            android:padding="10sp"
+            android:textColor="#817979"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textDateOfExport"
@@ -110,7 +112,7 @@
             android:layout_height="wrap_content"
             android:text="СВЕДЕНИЯ О ВЛАДЕЛЬЦЕ"
             android:fontFamily="casual"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:textColor="#000000"
             android:textSize="18sp" />
 
@@ -235,7 +237,7 @@
             android:layout_height="wrap_content"
             android:text="СВЕДЕНИЯ О ТРАНСПОРТНОМ СРЕДСТВЕ"
             android:fontFamily="casual"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:textColor="#000000"
             android:textSize="18sp" />
 
@@ -249,17 +251,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/typeOfTransport"
+        <Spinner
+            android:id="@+id/spinnerTypeOfTransport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="casual"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/fields"
             android:padding="10sp"
             android:textColor="#817979"
-            android:textSize="18sp"/>
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textNumberOfTransport"
@@ -289,7 +293,7 @@
             android:layout_height="wrap_content"
             android:text="СВЕДЕНИЯ О ЖИВОТНОМ"
             android:fontFamily="casual"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:textColor="#000000"
             android:textSize="18sp" />
 
@@ -383,7 +387,7 @@
                 android:layout_height="wrap_content"
                 android:text="Женский"
                 android:fontFamily="casual"
-                android:textColor="#63EDFF" />
+                android:textColor="#000000" />
 
             <RadioButton
                 android:id="@+id/radioButtonFemale"
@@ -391,7 +395,7 @@
                 android:layout_height="wrap_content"
                 android:text="Мужской"
                 android:fontFamily="casual"
-                android:textColor="#63EDFF" />
+                android:textColor="#000000" />
         </RadioGroup>
 
         <TextView
@@ -448,17 +452,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/countryOfOrigin"
+        <Spinner
+            android:id="@+id/spinnerCountryOfOrigin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="casual"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/fields"
             android:padding="10sp"
             android:textColor="#817979"
-            android:textSize="18sp"/>
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textIdentificationSystem"
@@ -470,17 +476,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/identificationSystem"
+        <Spinner
+            android:id="@+id/spinnerIdentificationSystem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="casual"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/fields"
             android:padding="10sp"
             android:textColor="#817979"
-            android:textSize="18sp"/>
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textDateOfChipping"
@@ -532,7 +540,7 @@
             android:layout_height="wrap_content"
             android:text="СВЕДЕНИЯ О ЛАБОРАТОРНЫХ ИССЛЕДОВАНИЯХ"
             android:fontFamily="casual"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:textColor="#000000"
             android:textSize="18sp" />
 
@@ -630,7 +638,7 @@
             android:layout_height="wrap_content"
             android:text="СВЕДЕНИЯ О ВАКЦИНАЦИИ"
             android:fontFamily="casual"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="5dp"
             android:textColor="#000000"
             android:textSize="18sp" />
 

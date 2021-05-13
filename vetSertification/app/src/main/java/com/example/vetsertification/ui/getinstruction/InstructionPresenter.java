@@ -29,11 +29,11 @@ public class InstructionPresenter {
 
     public void instruction() {
         InstructionData instructionData = view.getInstructionData();
-        if (TextUtils.isEmpty(instructionData.getCountry()) /*||
-                TextUtils.isEmpty(instructionData.getDate()) || TextUtils.isEmpty(instructionData.getTime())*/) {
+        /*if (TextUtils.isEmpty(instructionData.getCountry()) ||
+                TextUtils.isEmpty(instructionData.getDate()) || TextUtils.isEmpty(instructionData.getTime())) {
             view.showMessage("Заполните все поля");
             return;
-        }
+        } */
         view.showProgress();
         model.instruction(instructionData, new InstructionModel.InstructionCallback(){
             @Override
