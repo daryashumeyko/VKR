@@ -2,12 +2,19 @@ package com.example.vetsertification.ui.account;
 
 import android.os.AsyncTask;
 
+import com.example.vetsertification.api.InfoManager;
+import com.example.vetsertification.api.InfoManagerService;
+
+import retrofit2.Call;
+import retrofit2.Response;
+
 public class AccountModel {
     /*public UsersModel(DbHelper dbHelper) {
         this.dbHelper = dbHelper;
     }*/
 
     public void signIn(AccountData accountData, SignInCallback callback) {
+        Call<Response> Result = InfoManager.signIn(accountData.getEmail(), accountData.getPassword());
         SignInTask signInTask = new SignInTask(callback);
         signInTask.execute(accountData);
     }
@@ -16,7 +23,7 @@ public class AccountModel {
         void onSignIn(Boolean result);
     }
 
-    class SignInTask extends AsyncTask<AccountData, Void, Boolean> {
+    static class SignInTask extends AsyncTask<AccountData, Void, Boolean> {
 
         private final SignInCallback callback;
 

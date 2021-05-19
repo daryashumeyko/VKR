@@ -38,14 +38,17 @@ public class AccountPresenter {
                         view.showMessage("Неверный email или пароль");
                     else{
                         view.startUserMainActivity();
-                    }; //todo сделать переход на страницу авторизованного пользователя
+                    } //todo сделать переход на страницу авторизованного пользователя
                 }
             });
         }
 
         public void signUp() {
             view.startRegistrationActivity();
-            //todo сделать переход на страницу регистрации
+        }
+
+        public void fgtPsw() {
+            view.startForgetPasswordActivity();
         }
     }
 

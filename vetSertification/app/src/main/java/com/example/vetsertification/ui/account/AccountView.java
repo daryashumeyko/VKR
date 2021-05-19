@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
+import com.example.vetsertification.ui.forgetpassword.ForgetPasswordView;
 import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
@@ -37,6 +38,13 @@ public class AccountView extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 presenter.signIn();
+            }
+        });
+
+        findViewById(R.id.btnFgtPsw).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.fgtPsw();
             }
         });
 
@@ -72,6 +80,11 @@ public class AccountView extends AppCompatActivity{
 
     public void startRegistrationActivity(){
         Intent intent = new Intent(this, RegistrationView.class);
+        startActivity(intent);
+    }
+
+    public void startForgetPasswordActivity(){
+        Intent intent = new Intent(this, ForgetPasswordView.class);
         startActivity(intent);
     }
 
