@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import com.example.vetsertification.api.InfoManager;
 import com.example.vetsertification.api.InfoManagerService;
 
+import java.io.IOException;
+
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -14,7 +16,6 @@ public class AccountModel {
     }*/
 
     public void signIn(AccountData accountData, SignInCallback callback) {
-        Call<Response> Result = InfoManager.signIn(accountData.getEmail(), accountData.getPassword());
         SignInTask signInTask = new SignInTask(callback);
         signInTask.execute(accountData);
     }
@@ -33,7 +34,12 @@ public class AccountModel {
 
         @Override
         protected Boolean doInBackground(AccountData... params) {
-            /*List<User> users = new LinkedList<>();
+            try {
+                InfoManager.signIn(params[0].getEmail(), params[0].getPassword());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+           /*List<User> users = new LinkedList<>();
             Cursor cursor = dbHelper.getReadableDatabase().query(UserTable.TABLE, null, null, null, null, null, null);
             while (cursor.moveToNext()) {
                 User user = new User();
