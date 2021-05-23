@@ -37,6 +37,9 @@ public class UserMainPagePresenter {
             };
         });
     }*/
+    public void seeAccount() {
+        view.startSeeAccount();
+    };
 
     public void instruction() {
         view.startSeeInstruction();

@@ -58,6 +58,18 @@
             android:name=".ui.recordrosselchoz.RecordRosselchozView"
             android:label="RecordRosselchoz">
         </activity>
+        <activity
+            android:name=".ui.forgetpassword.ForgetPasswordView"
+            android:label="ForgetPassword">
+        </activity>
+        <activity
+            android:name=".ui.seeaccount.SeeAccountView"
+            android:label="SeeAccount">
+        </activity>
+        <activity
+            android:name=".ui.editaccount.EditAccountView"
+            android:label="EditAccount">
+        </activity>
     </application>
 
 </manifest>

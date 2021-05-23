@@ -10,6 +10,7 @@ import com.example.vetsertification.ui.application.ApplicationView;
 import com.example.vetsertification.ui.getinstruction.*;
 import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozView;
 import com.example.vetsertification.ui.recordvetoff.RecordVetOffView;
+import com.example.vetsertification.ui.seeaccount.SeeAccountView;
 
 public class UserMainPageView extends AppCompatActivity {
 
@@ -31,6 +32,12 @@ public class UserMainPageView extends AppCompatActivity {
                 presenter.seeAccount();
             }
         });*/
+        findViewById(R.id.seeAccount).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.seeAccount();
+            }
+        });
         findViewById(R.id.getInstruction).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +74,10 @@ public class UserMainPageView extends AppCompatActivity {
         Intent intent = new Intent(this, SeeAccountView.class);
         startActivity(intent);
     }*/
+    public void startSeeAccount(){
+        Intent intent = new Intent(this, SeeAccountView.class);
+        startActivity(intent);
+    }
     //переход на страницу просмотра инструкции
     public void startSeeInstruction(){
         Intent intent = new Intent(this, InstructionView.class);
