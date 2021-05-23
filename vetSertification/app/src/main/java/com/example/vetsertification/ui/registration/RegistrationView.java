@@ -40,7 +40,7 @@ public class RegistrationView extends AppCompatActivity {
         Birthday = (EditText) findViewById(R.id.birthday);
         Birthday.addTextChangedListener(new RegexMaskTextWatcher(Birthday, "(0?[1-9]|[12][0-9]|3[01])([\\.\\\\\\/-])(0?[1-9]|1[012])\\2(((19|20)\\d\\d)|(\\d\\d))"));
         Phone = (EditText) findViewById(R.id.phone);
-        Phone.addTextChangedListener(new RegexMaskTextWatcher(Phone, "((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{8,15}$"));
+        Phone.addTextChangedListener(new RegexMaskTextWatcher(Phone, "((8|\\+7))?(\\(?\\d{3}\\)?)?[\\d\\- ]{8,15}$"));
 
         findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {
             @Override

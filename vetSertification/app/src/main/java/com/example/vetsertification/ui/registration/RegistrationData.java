@@ -9,10 +9,19 @@ public class RegistrationData {
     private String birthday;
     private String phone;
     private String address;
-
+    private Integer id;
+    private Boolean result;
     public int emailColor;
     public int birthdayColor;
     public int phoneColor;
+
+    public Boolean getResult() { return result; }
+
+    public void setResult(Boolean result) { this.result = result; }
+
+    public Integer getId() { return id; }
+
+    public void setId(Integer id) { this.id = id; }
 
     public int getPhoneColor() {
         return phoneColor;

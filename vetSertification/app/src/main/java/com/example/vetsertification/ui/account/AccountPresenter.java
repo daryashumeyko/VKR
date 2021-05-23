@@ -2,6 +2,8 @@ package com.example.vetsertification.ui.account;
 
 import android.text.TextUtils;
 
+import com.example.vetsertification.ui.CurrentUser;
+
 public class AccountPresenter {
 
         private AccountView view;
@@ -20,7 +22,6 @@ public class AccountPresenter {
         }
 
         public void viewIsReady() {
-            //loadUsers();
         }
 
         public void signIn() {
@@ -35,10 +36,15 @@ public class AccountPresenter {
                 public void onSignIn(Boolean result) {
                     view.hideProgress();
                     if (!result)
-                        view.showMessage("Неверный email или пароль");
+                        view.showMessage("Отсутствует соединение с сервером");
                     else{
-                        view.startUserMainActivity();
-                    } //todo сделать переход на страницу авторизованного пользователя
+                        Boolean requestResult = CurrentUser.getInstance().getRegistrationData().getResult();
+                        if (!requestResult)
+                            view.showMessage("Неверный email или пароль");
+                        else{
+                            view.startUserMainActivity();
+                        }
+                    }
                 }
             });
         }
