@@ -1,7 +1,5 @@
 package com.example.vetsertification.ui.registration;
 
-import java.util.Date;
-
 public class RegistrationData {
     private String email;
     private String password;

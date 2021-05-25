@@ -1,18 +1,18 @@
 package com.example.vetsertification.ui.editaccount;
 
 import android.os.AsyncTask;
-
+import com.example.vetsertification.api.InfoManager;
 import com.example.vetsertification.ui.seeaccount.SeeAccountData;
-import com.example.vetsertification.ui.seeaccount.SeeAccountModel;
+import java.io.IOException;
 
 public class EditAccountModel {
-    public void editAccount(SeeAccountData editAccountData, EditAccountModel.EditAccountCallback callback) {
+    public void saveAccount(SeeAccountData seeAccountData, EditAccountModel.EditAccountCallback callback) {
         EditAccountModel.EditAccountTask editAccountTask = new EditAccountModel.EditAccountTask(callback);
-        editAccountTask.execute(editAccountData);
+        editAccountTask.execute(seeAccountData);
     }
 
     interface EditAccountCallback {
-        void onEditAccount(Boolean result);
+        void onSaveAccount(Boolean result);
     }
 
     class EditAccountTask extends AsyncTask<SeeAccountData, Void, Boolean> {
@@ -25,13 +25,20 @@ public class EditAccountModel {
 
         @Override
         protected Boolean doInBackground(SeeAccountData... params) {
+
+            try {
+                InfoManager.editAccount(params[0].getName(), params[0].getPhone(), params[0].getAddress(), params[0].getBirthday());
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
             return true;
         }
 
         @Override
         protected void onPostExecute(Boolean success) {
             if (callback != null) {
-                callback.onEditAccount(success);
+                callback.onSaveAccount(success);
             }
         }
     }

@@ -2,9 +2,6 @@ package com.example.vetsertification.ui.forgetpassword;
 
 import android.os.AsyncTask;
 
-import com.example.vetsertification.ui.getinstruction.InstructionData;
-import com.example.vetsertification.ui.getinstruction.InstructionModel;
-
 public class ForgetPasswordModel {
     public void forgetpassword(ForgetPasswordData forgetPasswordData, ForgetPasswordModel.ForgetPasswordCallback callback) {
         ForgetPasswordModel.ForgetPasswordTask forgetPasswordTask = new ForgetPasswordModel.ForgetPasswordTask(callback);

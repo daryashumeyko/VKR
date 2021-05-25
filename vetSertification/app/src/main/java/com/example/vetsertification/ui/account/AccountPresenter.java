@@ -1,7 +1,6 @@
 package com.example.vetsertification.ui.account;
 
 import android.text.TextUtils;
-
 import com.example.vetsertification.ui.CurrentUser;
 
 public class AccountPresenter {

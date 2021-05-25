@@ -13,7 +13,6 @@ import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
 public class AccountView extends AppCompatActivity{
-   // private UserAdapter userAdapter;
 
     private EditText Email;
     private EditText Password;

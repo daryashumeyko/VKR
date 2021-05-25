@@ -2,7 +2,6 @@ package com.example.vetsertification.ui.registration;
 
 import android.graphics.Color;
 import android.text.TextUtils;
-import android.widget.EditText;
 
 public class RegistrationPresenter {
 
@@ -22,7 +21,6 @@ public class RegistrationPresenter {
     }
 
     public void viewIsReady() {
-        //loadUsers();
     }
 
     public void register() {

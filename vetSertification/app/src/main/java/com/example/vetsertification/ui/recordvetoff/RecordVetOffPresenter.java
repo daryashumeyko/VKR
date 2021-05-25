@@ -19,7 +19,6 @@ public class RecordVetOffPresenter {
     }
 
     public void viewIsReady() {
-        //loadUsers();
     }
 
     public void recVetOff() {

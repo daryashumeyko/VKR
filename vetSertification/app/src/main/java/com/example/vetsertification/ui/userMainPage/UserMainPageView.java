@@ -26,12 +26,6 @@ public class UserMainPageView extends AppCompatActivity {
 
     private void init() {
 
-        /*findViewById(R.id.seeAccount).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.seeAccount();
-            }
-        });*/
         findViewById(R.id.seeAccount).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,11 +63,6 @@ public class UserMainPageView extends AppCompatActivity {
         presenter.viewIsReady();
     }
 
-    /*//переход на страницу просмотра аккаунта
-    public void startSeeAccountActivity(){
-        Intent intent = new Intent(this, SeeAccountView.class);
-        startActivity(intent);
-    }*/
     public void startSeeAccount(){
         Intent intent = new Intent(this, SeeAccountView.class);
         startActivity(intent);

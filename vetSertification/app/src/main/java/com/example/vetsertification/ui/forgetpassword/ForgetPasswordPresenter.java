@@ -2,10 +2,6 @@ package com.example.vetsertification.ui.forgetpassword;
 
 import android.text.TextUtils;
 
-import com.example.vetsertification.ui.getinstruction.InstructionData;
-import com.example.vetsertification.ui.getinstruction.InstructionModel;
-import com.example.vetsertification.ui.getinstruction.InstructionView;
-
 public class ForgetPasswordPresenter {
 
     private ForgetPasswordView view;
@@ -24,7 +20,6 @@ public class ForgetPasswordPresenter {
     }
 
     public void viewIsReady() {
-        //loadUsers();
     }
 
     public void forgetpassword() {

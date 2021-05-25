@@ -1,14 +1,8 @@
 package com.example.vetsertification.ui.account;
 
 import android.os.AsyncTask;
-
 import com.example.vetsertification.api.InfoManager;
-import com.example.vetsertification.ui.CurrentUser;
-
 import java.io.IOException;
-
-import retrofit2.Call;
-import retrofit2.Response;
 
 public class AccountModel {
     public void signIn(AccountData accountData, SignInCallback callback) {

@@ -2,9 +2,6 @@ package com.example.vetsertification.ui.getinstruction;
 
 import android.os.AsyncTask;
 
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozData;
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozModel;
-
 public class InstructionModel {
     public void instruction(InstructionData instructionData, InstructionModel.InstructionCallback callback) {
         InstructionModel.InstructionTask instructionTask = new InstructionModel.InstructionTask(callback);

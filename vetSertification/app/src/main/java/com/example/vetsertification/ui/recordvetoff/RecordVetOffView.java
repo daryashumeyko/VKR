@@ -12,7 +12,6 @@ import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
 public class RecordVetOffView extends AppCompatActivity {
-    // private UserAdapter userAdapter;
 
     private EditText VetOff;
     private EditText Date;

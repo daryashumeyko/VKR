@@ -90,11 +90,9 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
         country.add("США"); country.add("Турция"); country.add("Узбекистан"); country.add("Финляндия"); country.add("Франция");
         country.add("Хорватия"); country.add("Чехия"); country.add("Эстония"); country.add("ЮАР"); country.add("Япония");
 
-        //Создаем массив элементов выпадающего списка:
         List<String> transport = new ArrayList<String>();
         transport.add("Морской"); transport.add("Авиатранспортный"); transport.add("Речной"); transport.add("Железнодорожный"); transport.add("Автомобильный");
 
-        //Создаем массив элементов выпадающего списка:
         List<String> identification = new ArrayList<String>();
         identification.add("Чипирование"); identification.add("Клеймение");
 
@@ -109,16 +107,12 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
 
         //Создаем для spinnerTypeOfTransport адаптер:
         ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, transport);
-        //Настраиваем внешний вид выпадающего списка, используя готовый системный шаблон:
         dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Присоединяем адаптер данных к spinner:
         spinnerTypeOfTransport.setAdapter(dataAdapter2);
 
         //Создаем для spinnerIdentificationSystem адаптер:
         ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, identification);
-        //Настраиваем внешний вид выпадающего списка, используя готовый системный шаблон:
         dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Присоединяем адаптер данных к spinner:
         spinnerIdentificationSystem.setAdapter(dataAdapter3);
     }
 

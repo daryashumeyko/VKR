@@ -2,9 +2,6 @@ package com.example.vetsertification.ui.seeaccount;
 
 import android.os.AsyncTask;
 
-import com.example.vetsertification.ui.registration.RegistrationData;
-import com.example.vetsertification.ui.registration.RegistrationModel;
-
 public class SeeAccountModel {
     public void seeAccount(SeeAccountData seeAccountData, SeeAccountModel.SeeAccountCallback callback) {
         SeeAccountModel.SeeAccountTask seeAccountTask = new SeeAccountModel.SeeAccountTask(callback);

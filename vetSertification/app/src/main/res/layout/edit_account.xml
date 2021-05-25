@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Редактирование аккаунта"
+            android:text="РЕДАКТИРОВАНИЕ АККАУНТА"
             android:fontFamily="casual"
             android:textStyle="bold"
             android:textColor="#000000"

@@ -19,7 +19,6 @@ public class SplashScreen extends Activity {
             @Override
             public void run() {
                 Intent mainIntent = new Intent(SplashScreen.this, AccountView.class);
-                //mainIntent.putExtra("user", "");
                 SplashScreen.this.startActivity(mainIntent);
                 SplashScreen.this.finish();
             }

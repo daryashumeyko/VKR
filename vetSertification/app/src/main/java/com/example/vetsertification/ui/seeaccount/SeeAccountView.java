@@ -4,22 +4,13 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.CurrentUser;
 import com.example.vetsertification.ui.application.ApplicationView;
-import com.example.vetsertification.ui.editaccount.EditAccountModel;
 import com.example.vetsertification.ui.editaccount.EditAccountView;
-import com.example.vetsertification.ui.getinstruction.InstructionView;
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozView;
-import com.example.vetsertification.ui.recordvetoff.RecordVetOffView;
 import com.example.vetsertification.ui.registration.RegistrationData;
-import com.example.vetsertification.ui.userMainPage.UserMainPageModel;
-import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 
 public class SeeAccountView extends AppCompatActivity {
 

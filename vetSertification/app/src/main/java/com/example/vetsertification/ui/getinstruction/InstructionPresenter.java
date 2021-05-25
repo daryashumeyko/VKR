@@ -1,11 +1,5 @@
 package com.example.vetsertification.ui.getinstruction;
 
-import android.text.TextUtils;
-
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozData;
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozModel;
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozView;
-
 public class InstructionPresenter {
 
     private InstructionView view;

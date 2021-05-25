@@ -19,9 +19,7 @@ public class ApplicationPresenter {
         view = null;
     }
 
-    public void viewIsReady() {
-        //loadUsers();
-    }
+    public void viewIsReady() { }
 
     public void doApp() {
 

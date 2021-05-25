@@ -10,15 +10,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozData;
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozModel;
-import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozPresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
-
 import java.util.ArrayList;
 import java.util.List;
 

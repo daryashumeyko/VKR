@@ -20,7 +20,6 @@ public class RecordRosselchozPresenter {
     }
 
     public void viewIsReady() {
-        //loadUsers();
     }
 
     public void recRosselchoz() {

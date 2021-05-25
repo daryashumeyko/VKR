@@ -23,17 +23,7 @@ public class ApplicationModel {
 
         @Override
         protected Boolean doInBackground(ApplicationData... params) {
-            /*List<User> users = new LinkedList<>();
-            Cursor cursor = dbHelper.getReadableDatabase().query(UserTable.TABLE, null, null, null, null, null, null);
-            while (cursor.moveToNext()) {
-                User user = new User();
-                user.setId(cursor.getLong(cursor.getColumnIndex(UserTable.COLUMN.ID)));
-                user.setName(cursor.getString(cursor.getColumnIndex(UserTable.COLUMN.NAME)));
-                user.setEmail(cursor.getString(cursor.getColumnIndex(UserTable.COLUMN.EMAIL)));
-                users.add(user);
-            }
-            cursor.close();*/
-            //todo реализовать проверку наличия учетной записи
+
             return true;
         }
 

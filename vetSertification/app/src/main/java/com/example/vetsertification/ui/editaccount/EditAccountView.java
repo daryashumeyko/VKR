@@ -4,20 +4,24 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
+import android.widget.EditText;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.application.ApplicationView;
-import com.example.vetsertification.ui.getinstruction.InstructionView;
-import com.example.vetsertification.ui.seeaccount.SeeAccountModel;
-import com.example.vetsertification.ui.seeaccount.SeeAccountPresenter;
+import com.example.vetsertification.ui.CurrentUser;
+import com.example.vetsertification.ui.registration.RegistrationData;
+import com.example.vetsertification.ui.seeaccount.SeeAccountData;
 import com.example.vetsertification.ui.seeaccount.SeeAccountView;
 
 public class EditAccountView extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
     private EditAccountPresenter presenter;
+    private EditText Phone;
+    private EditText Birthday;
+    private EditText Address;
+    private EditText Name;
+    private TextView Message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +31,23 @@ public class EditAccountView extends AppCompatActivity {
     }
 
     private void init() {
+        Phone = (EditText) findViewById(R.id.phone);
+        Birthday = (EditText) findViewById(R.id.birthday);
+        Address = (EditText) findViewById(R.id.address);
+        Name = (EditText) findViewById(R.id.name);
+
         findViewById(R.id.saveAccount).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.editAccount();
+                presenter.saveAccount();
             }
         });
+
+        RegistrationData registrationData = CurrentUser.getInstance().getRegistrationData();
+        Phone.setText(registrationData.getPhone());
+        Birthday.setText(registrationData.getBirthday());
+        Address.setText(registrationData.getAddress());
+        Name.setText(registrationData.getName());
 
         EditAccountModel editAccountModel = new EditAccountModel();
         presenter = new EditAccountPresenter(editAccountModel);
@@ -40,7 +55,21 @@ public class EditAccountView extends AppCompatActivity {
         presenter.viewIsReady();
     }
 
-    public void startSeeAccount(){
+    public SeeAccountData getSeeAccountData() {
+        SeeAccountData seeAccountData = new SeeAccountData();
+        seeAccountData.setPhone(Phone.getText().toString());
+        seeAccountData.setBirthday(Birthday.getText().toString());
+        seeAccountData.setAddress(Address.getText().toString());
+        seeAccountData.setName(Name.getText().toString());
+        return seeAccountData;
+    }
+
+    public void showMessage(String text) {
+        Message = (TextView) findViewById(R.id.message);
+        Message.setText(text);
+    }
+
+    public void startSeeAccountActivity(){
         Intent intent = new Intent(this, SeeAccountView.class);
         startActivity(intent);
     }
