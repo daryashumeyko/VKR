@@ -10,6 +10,7 @@ import com.example.vetsertification.R;
 import com.example.vetsertification.ui.CurrentUser;
 import com.example.vetsertification.ui.application.ApplicationView;
 import com.example.vetsertification.ui.editaccount.EditAccountView;
+import com.example.vetsertification.ui.mypets.MyPetsView;
 import com.example.vetsertification.ui.registration.RegistrationData;
 
 public class SeeAccountView extends AppCompatActivity {
@@ -68,7 +69,7 @@ public class SeeAccountView extends AppCompatActivity {
     }
 
     public void startSeePets(){
-        Intent intent = new Intent(this, ApplicationView.class);
+        Intent intent = new Intent(this, MyPetsView.class);
         startActivity(intent);
     }
 

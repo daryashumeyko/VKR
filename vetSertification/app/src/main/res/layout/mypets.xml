@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="МОИ ПИТОМЦЫ"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/newPet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:padding="20sp"
+            android:layout_marginTop="10dp"
+            android:text="Добавить животное"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fields"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:collapseColumns="2"
+            android:background="@drawable/fields">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вид животного:"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_column="0"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/kindOfAnimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="1"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Дата рождения:"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_column="0"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="1"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кличка:"
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_column="0"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="casual"
+                android:gravity="left"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_column="1"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+        </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:padding="10sp"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            android:text="Подробнее"
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

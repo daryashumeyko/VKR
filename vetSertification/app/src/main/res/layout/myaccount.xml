@@ -11,6 +11,7 @@
     android:background="@color/colorPrimary"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
+
     android:layout_height="match_parent">
 
     <TextView

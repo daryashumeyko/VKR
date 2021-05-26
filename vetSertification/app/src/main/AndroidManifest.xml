@@ -74,6 +74,10 @@
             android:name=".ui.account.AccountView"
             android:label="AccountView">
         </activity>
+        <activity
+            android:name=".ui.mypets.MyPetsView"
+            android:label="MyPetsView">
+        </activity>
     </application>
 
 </manifest>
