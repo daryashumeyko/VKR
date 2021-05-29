@@ -3,8 +3,6 @@ package com.example.vetsertification.ui.mypets;
 import android.os.AsyncTask;
 
 import com.example.vetsertification.api.InfoManager;
-import com.example.vetsertification.ui.account.AccountData;
-import com.example.vetsertification.ui.account.AccountModel;
 
 import java.io.IOException;
 
@@ -28,12 +26,12 @@ public class MyPetsModel {
 
         @Override
         protected Boolean doInBackground(MyPetsData... params) {
-            try {
-                InfoManager.details();
+            /*try {
+                InfoManager.details(id);
             } catch (IOException e) {
                 e.printStackTrace();
                 return false;
-            }
+            }*/
             return true;
         }
 

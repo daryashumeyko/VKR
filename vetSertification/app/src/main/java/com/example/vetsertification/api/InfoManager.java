@@ -13,7 +13,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class InfoManager {
-    private static String httpAddress = "http://192.168.43.111:8089";
+    private static String httpAddress = "http://192.168.43.112:8089";
 
     //POST авторизация
     public static void signIn(String email, String password) throws IOException {
@@ -27,16 +27,19 @@ public class InfoManager {
                 .post(formBody)
                 .build();
         //исполняем запрос синхронно, в том потоке, в котором вызываем `execute`
+        Response response = null;
+        Integer id = 0;
         try {
             RegistrationData registrationData = CurrentUser.getInstance().getRegistrationData();
             registrationData.setResult(false);
             registrationData.setEmail(email);
 
-            Response response = client.newCall(request).execute();
+            response = client.newCall(request).execute();
 
             if(response.code() == 200) {
                 registrationData.setResult(true);
-                registrationData.setId(Integer.parseInt(response.headers().values("id").get(0)));
+                id = Integer.parseInt(response.headers().values("id").get(0));
+                registrationData.setId(id);
                 registrationData.setName(response.headers().values("name").get(0));
                 registrationData.setAddress(response.headers().values("address").get(0));
                 registrationData.setBirthday(response.headers().values("birthday").get(0));
@@ -44,12 +47,18 @@ public class InfoManager {
             }
         } catch (IOException e) {
             e.printStackTrace();
+            return;
         } catch (IllegalStateException e) {
             e.printStackTrace();
+            return;
+        }
+        if(response.code() == 200) {
+            details(id);
         }
     }
 
-    //PUT редактирование аккаунта
+
+        //PUT редактирование аккаунта
     public static void editAccount(String phone, String name, String address, String birthday) throws IOException {
         OkHttpClient client = new OkHttpClient();
         RequestBody formBody = new FormBody.Builder().build();
@@ -76,10 +85,10 @@ public class InfoManager {
     }
 
     //GET инф о животном
-    public static void details() throws IOException {
+    public static void details(Integer id) throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url(httpAddress + "/petdetails")
+                .url(httpAddress + "/petdetails?id=" + id)
                 .get()
                 .build();
         try {
