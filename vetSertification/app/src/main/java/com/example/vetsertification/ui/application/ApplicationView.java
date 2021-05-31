@@ -3,6 +3,8 @@ package com.example.vetsertification.ui.application;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -114,6 +116,36 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
         ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, identification);
         dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerIdentificationSystem.setAdapter(dataAdapter3);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.registered_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        UserMainPagePresenter presenter = UserMainPageView.getPresenter();
+        int id = item.getItemId();
+        switch(id){
+            case R.id.see_account:
+                presenter.seeAccount();
+                return true;
+            case R.id.get_instruction:
+                presenter.instruction();
+                return true;
+            case R.id.application:
+                presenter.application();
+                return true;
+            case R.id.recordVetOff:
+                presenter.recVetOff();
+                return true;
+            case R.id.recordRosselchoz:
+                presenter.recRosselchoz();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

@@ -1,27 +1,55 @@
 package com.example.vetsertification.ui.mainpage;
 
-import android.accounts.Account;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.account.AccountView;
 import com.example.vetsertification.ui.getinstruction.InstructionView;
-import com.example.vetsertification.ui.seeaccount.SeeAccountView;
 
 public class MainPageView extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
-    private MainPagePresenter presenter;
+    private static MainPagePresenter presenter;
+
+    public static MainPagePresenter getPresenter() {
+        return presenter;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
         init();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case R.id.account:
+                presenter.authorization();
+                return true;
+            case R.id.instruction:
+                presenter.instruction();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void init() {

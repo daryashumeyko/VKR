@@ -3,6 +3,8 @@ package com.example.vetsertification.ui.seeaccount;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,8 @@ import com.example.vetsertification.ui.application.ApplicationView;
 import com.example.vetsertification.ui.editaccount.EditAccountView;
 import com.example.vetsertification.ui.mypets.MyPetsView;
 import com.example.vetsertification.ui.registration.RegistrationData;
+import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
+import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
 public class SeeAccountView extends AppCompatActivity {
 
@@ -61,6 +65,36 @@ public class SeeAccountView extends AppCompatActivity {
         presenter = new SeeAccountPresenter(seeAccountModel);
         presenter.attachView(this);
         presenter.viewIsReady();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.registered_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        UserMainPagePresenter presenter = UserMainPageView.getPresenter();
+        int id = item.getItemId();
+        switch(id){
+            case R.id.see_account:
+                presenter.seeAccount();
+                return true;
+            case R.id.get_instruction:
+                presenter.instruction();
+                return true;
+            case R.id.application:
+                presenter.application();
+                return true;
+            case R.id.recordVetOff:
+                presenter.recVetOff();
+                return true;
+            case R.id.recordRosselchoz:
+                presenter.recRosselchoz();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void startEditAccount(){

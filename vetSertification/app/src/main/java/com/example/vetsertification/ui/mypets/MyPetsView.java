@@ -3,6 +3,8 @@ package com.example.vetsertification.ui.mypets;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ import com.example.vetsertification.ui.account.AccountPresenter;
 import com.example.vetsertification.ui.forgetpassword.ForgetPasswordView;
 import com.example.vetsertification.ui.registration.RegistrationData;
 import com.example.vetsertification.ui.registration.RegistrationView;
+import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
 import java.io.IOException;
@@ -73,6 +76,36 @@ public class MyPetsView extends AppCompatActivity {
         presenter = new MyPetsPresenter(myPetsModel);
         presenter.attachView(this);
         presenter.viewIsReady();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.registered_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        UserMainPagePresenter presenter = UserMainPageView.getPresenter();
+        int id = item.getItemId();
+        switch(id){
+            case R.id.see_account:
+                presenter.seeAccount();
+                return true;
+            case R.id.get_instruction:
+                presenter.instruction();
+                return true;
+            case R.id.application:
+                presenter.application();
+                return true;
+            case R.id.recordVetOff:
+                presenter.recVetOff();
+                return true;
+            case R.id.recordRosselchoz:
+                presenter.recRosselchoz();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public MyPetsData getMyPetsData() {

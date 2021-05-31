@@ -3,11 +3,14 @@ package com.example.vetsertification.ui.userMainPage;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.application.ApplicationView;
 import com.example.vetsertification.ui.getinstruction.*;
+import com.example.vetsertification.ui.mainpage.MainPagePresenter;
 import com.example.vetsertification.ui.recordrosselchoz.RecordRosselchozView;
 import com.example.vetsertification.ui.recordvetoff.RecordVetOffView;
 import com.example.vetsertification.ui.seeaccount.SeeAccountView;
@@ -15,7 +18,11 @@ import com.example.vetsertification.ui.seeaccount.SeeAccountView;
 public class UserMainPageView extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
-    private UserMainPagePresenter presenter;
+    private static UserMainPagePresenter presenter;
+
+    public static UserMainPagePresenter getPresenter() {
+        return presenter;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +68,35 @@ public class UserMainPageView extends AppCompatActivity {
         presenter = new UserMainPagePresenter(userMainPageModel);
         presenter.attachView(this);
         presenter.viewIsReady();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.registered_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case R.id.see_account:
+                presenter.seeAccount();
+                return true;
+            case R.id.get_instruction:
+                presenter.instruction();
+                return true;
+            case R.id.application:
+                presenter.application();
+                return true;
+            case R.id.recordVetOff:
+                presenter.recVetOff();
+                return true;
+            case R.id.recordRosselchoz:
+                presenter.recRosselchoz();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void startSeeAccount(){

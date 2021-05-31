@@ -3,11 +3,16 @@ package com.example.vetsertification.ui.forgetpassword;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
+import com.example.vetsertification.ui.mainpage.MainPagePresenter;
+import com.example.vetsertification.ui.mainpage.MainPageView;
+import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
 public class ForgetPasswordView extends AppCompatActivity{
@@ -39,6 +44,27 @@ public class ForgetPasswordView extends AppCompatActivity{
         presenter = new ForgetPasswordPresenter(forgetPasswordModel);
         presenter.attachView(this);
         presenter.viewIsReady();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        MainPagePresenter presenter = MainPageView.getPresenter();
+        int id = item.getItemId();
+        switch(id){
+            case R.id.account:
+                presenter.authorization();
+                return true;
+            case R.id.instruction:
+                presenter.instruction();
+                return true;
+        }
+        return true;
     }
 
     public ForgetPasswordData getForgetPasswordData() {

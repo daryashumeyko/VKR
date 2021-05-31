@@ -3,6 +3,8 @@ package com.example.vetsertification.ui.getinstruction;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,6 +14,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
+import com.example.vetsertification.ui.CurrentUser;
+import com.example.vetsertification.ui.mainpage.MainPageView;
+import com.example.vetsertification.ui.registration.RegistrationData;
+import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +61,49 @@ public class InstructionView extends AppCompatActivity implements AdapterView.On
 
         //Присоединяем адаптер данных к spinner:
         spinner.setAdapter(dataAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //RegistrationData registrationData = CurrentUser.getInstance().getRegistrationData();
+        //if (registrationData.getEmail().equals("")){
+            getMenuInflater().inflate(R.menu.main_menu, menu);
+            return super.onCreateOptionsMenu(menu);
+        //}
+        //else{
+        //    getMenuInflater().inflate(R.menu.registered_menu, menu);
+        //    return super.onCreateOptionsMenu(menu);
+       // }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case R.id.account:
+                MainPageView.getPresenter().authorization();
+                return true;
+            case R.id.instruction:
+                MainPageView.getPresenter().instruction();
+                return true;
+            /*case R.id.account:
+                UserMainPageView.getPresenter().seeAccount();
+                return true;
+            case R.id.get_instruction:
+                UserMainPageView.getPresenter().instruction();
+                return true;
+            case R.id.application:
+                UserMainPageView.getPresenter().application();
+                return true;
+            case R.id.recordVetOff:
+                UserMainPageView.getPresenter().recVetOff();
+                return true;
+            case R.id.recordRosselchoz:
+                UserMainPageView.getPresenter().recRosselchoz();
+                return true;*/
+
+        }
+        return true;
     }
 
     @Override
