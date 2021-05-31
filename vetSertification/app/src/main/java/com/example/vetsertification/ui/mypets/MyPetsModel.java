@@ -2,10 +2,6 @@ package com.example.vetsertification.ui.mypets;
 
 import android.os.AsyncTask;
 
-import com.example.vetsertification.api.InfoManager;
-
-import java.io.IOException;
-
 public class MyPetsModel {
     public void details(MyPetsData myPetsData, MyPetsModel.DetailsCallback callback) {
         MyPetsModel.DetailsTask detailsTask = new MyPetsModel.DetailsTask(callback);

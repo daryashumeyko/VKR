@@ -1,4 +1,4 @@
-package com.example.vetsertification.ui.mypets;
+package com.example.vetsertification.ui.addpet;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -12,35 +12,38 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.vetsertification.R;
-import com.example.vetsertification.api.InfoManager;
 import com.example.vetsertification.ui.CurrentPet;
-import com.example.vetsertification.ui.CurrentUser;
-import com.example.vetsertification.ui.account.AccountData;
-import com.example.vetsertification.ui.account.AccountModel;
-import com.example.vetsertification.ui.account.AccountPresenter;
-import com.example.vetsertification.ui.addpet.AddPetView;
-import com.example.vetsertification.ui.forgetpassword.ForgetPasswordView;
-import com.example.vetsertification.ui.registration.RegistrationData;
+import com.example.vetsertification.ui.RegexMaskTextWatcher;
+import com.example.vetsertification.ui.mypets.MyPetsData;
+import com.example.vetsertification.ui.mypets.MyPetsModel;
+import com.example.vetsertification.ui.mypets.MyPetsPresenter;
 import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
 import java.io.IOException;
 
-public class MyPetsView extends AppCompatActivity {
+public class AddPetView extends AppCompatActivity {
 
-    private TextView KindOfAnimal;
-    private TextView Birthday;
-    private TextView Name;
+    public EditText Breed;
+    public EditText Name;
+    public EditText Gender;
+    public EditText Birthday;
+    public EditText Address;
+    public EditText IdentificationSystem;
+    public EditText Number;
+    public EditText DateOfChipping;
+    public EditText KindOfAnimal;
+    public EditText CountryOfOrigin;
     private TextView Message;
     private ProgressDialog progressDialog;
 
-    private MyPetsPresenter presenter;
+    private AddPetPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mypets);
+        setContentView(R.layout.add_pet);
         try {
             init();
         } catch (IOException e) {
@@ -50,31 +53,28 @@ public class MyPetsView extends AppCompatActivity {
 
     private void init() throws IOException {
 
-        KindOfAnimal = (TextView) findViewById(R.id.kindOfAnimal);
-        Birthday = (TextView) findViewById(R.id.birthday);
-        Name = (TextView) findViewById(R.id.name);
+        Name = (EditText) findViewById(R.id.name);
+        KindOfAnimal = (EditText) findViewById(R.id.kindOfAnimal);
+        Breed = (EditText) findViewById(R.id.breed);
+        Address = (EditText) findViewById(R.id.address);
+        Birthday = (EditText) findViewById(R.id.birthday);
+        Birthday.addTextChangedListener(new RegexMaskTextWatcher(Birthday, "(0?[1-9]|[12][0-9]|3[01])([\\.\\\\\\/-])(0?[1-9]|1[012])\\2(((19|20)\\d\\d)|(\\d\\d))"));
+        CountryOfOrigin = (EditText) findViewById(R.id.countryOfOrigin);
+        IdentificationSystem = (EditText) findViewById(R.id.identificationSystem);
+        Number = (EditText) findViewById(R.id.number);
+        DateOfChipping = (EditText) findViewById(R.id.dateOfChipping);
+        DateOfChipping.addTextChangedListener(new RegexMaskTextWatcher(DateOfChipping, "(0?[1-9]|[12][0-9]|3[01])([\\.\\\\\\/-])(0?[1-9]|1[012])\\2(((19|20)\\d\\d)|(\\d\\d))"));
+        Gender = (EditText) findViewById(R.id.gender);
 
-        findViewById(R.id.details).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.addpet).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.details();
+                presenter.addPet();
             }
         });
 
-        findViewById(R.id.newPet).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.newPet();
-            }
-        });
-
-        MyPetsData myPetsData = CurrentPet.getInstance().getMyPetsData();
-        KindOfAnimal.setText(myPetsData.getKindOfAnimal());
-        Birthday.setText(myPetsData.getBirthday());
-        Name.setText(myPetsData.getName());
-
-        MyPetsModel myPetsModel = new MyPetsModel();
-        presenter = new MyPetsPresenter(myPetsModel);
+        AddPetModel addPetModel = new AddPetModel();
+        presenter = new AddPetPresenter(addPetModel);
         presenter.attachView(this);
         presenter.viewIsReady();
     }
@@ -122,11 +122,6 @@ public class MyPetsView extends AppCompatActivity {
 
     public void startPetDetails(){
         Intent intent = new Intent(this, UserMainPageView.class);
-        startActivity(intent);
-    }
-
-    public void startNewPet(){
-        Intent intent = new Intent(this, AddPetView.class);
         startActivity(intent);
     }
 
