@@ -12,13 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.vetsertification.R;
-import com.example.vetsertification.ui.CurrentPet;
 import com.example.vetsertification.ui.RegexMaskTextWatcher;
 import com.example.vetsertification.ui.mypets.MyPetsData;
-import com.example.vetsertification.ui.mypets.MyPetsModel;
-import com.example.vetsertification.ui.mypets.MyPetsPresenter;
-import com.example.vetsertification.ui.registration.RegistrationData;
-import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 

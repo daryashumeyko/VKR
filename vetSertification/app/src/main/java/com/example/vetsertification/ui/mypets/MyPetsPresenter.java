@@ -42,9 +42,9 @@ public class MyPetsPresenter {
                 if (!result)
                     view.showMessage("Отсутствует соединение с сервером");
                 else{
-                    Boolean requestResult = CurrentPet.getInstance().getMyPetsData().getResult();
+                    Boolean requestResult = CurrentPet.getInstance().getMyPetsData().get(0).getResult();
                     if (!requestResult)
-                        view.showMessage("Неверный email или пароль");
+                        view.showMessage("");
                     else{
                         view.startPetDetails();
                     }

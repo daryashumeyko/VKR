@@ -1,11 +1,12 @@
 package com.example.vetsertification.api;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.util.List;
 
 import com.example.vetsertification.ui.CurrentPet;
 import com.example.vetsertification.ui.CurrentUser;
 import com.example.vetsertification.ui.mypets.MyPetsData;
-import com.example.vetsertification.ui.mypets.MyPetsView;
 import com.example.vetsertification.ui.registration.RegistrationData;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -24,7 +25,8 @@ public class InfoManager {
         RequestBody formBody = new FormBody.Builder().build();
         //создаём запрос, указывая адрес и параметры
         Request request = new Request.Builder()
-                .url(httpAddress + "/auth?email=" + email + "&password=" + password)
+                .url(httpAddress + "/auth?email=" + email + "&password=" + password )
+                .addHeader("Content-Type","text/json;Charset=UTF-8")
                 .post(formBody)
                 .build();
         //исполняем запрос синхронно, в том потоке, в котором вызываем `execute`
@@ -92,22 +94,23 @@ public class InfoManager {
                 .get()
                 .build();
         try {
-            MyPetsData myPetsData = CurrentPet.getInstance().getMyPetsData();
-            myPetsData.setResult(false);
-
             Response response = client.newCall(request).execute();
 
             if(response.code() == 200) {
-                myPetsData.setBreed(response.headers().values("breed").get(0));
-                myPetsData.setName(response.headers().values("name").get(0));
-                myPetsData.setAddress(response.headers().values("address").get(0));
-                myPetsData.setBirthday(response.headers().values("birthday").get(0));
-                myPetsData.setGender(response.headers().values("gender").get(0));
-                myPetsData.setNumber(response.headers().values("number").get(0));
-                myPetsData.setDateOfChipping(response.headers().values("date").get(0));
-                myPetsData.setCountryOfOrigin(response.headers().values("country").get(0));
-                myPetsData.setKindOfAnimal(response.headers().values("kind").get(0));
-                myPetsData.setIdentificationSystem(response.headers().values("identification").get(0));
+                MyPetsData petsData = new MyPetsData();
+                petsData.setUserId(id);
+                petsData.setName(response.headers().values("name").get(0));
+                petsData.setBreed(response.headers().values("breed").get(0));
+                petsData.setKindOfAnimal(response.headers().values("kind").get(0));
+                petsData.setIdentificationSystem(response.headers().values("identification").get(0));
+                petsData.setAddress(response.headers().values("address").get(0));
+                petsData.setBirthday(response.headers().values("birthday").get(0));
+                petsData.setCountryOfOrigin(response.headers().values("country").get(0));
+                petsData.setDateOfChipping(response.headers().values("date").get(0));
+                petsData.setNumber(response.headers().values("number").get(0));
+                petsData.setGender(response.headers().values("gender").get(0));
+                petsData.setResult(true);
+                CurrentPet.getInstance().addPet(0, petsData);
                }
         } catch (IOException e) {
             e.printStackTrace();
@@ -123,6 +126,7 @@ public class InfoManager {
         Request request = new Request.Builder()
                 .url(httpAddress + "/registration?name=" + name + "&email=" + email + "&birthday=" + birthday  + "&phone=" + phone
                         + "&address=" + address + "&password" + password)
+                .addHeader("Content-Type","text/json;Charset=UTF-8")
                 .post(formBody)
                 .build();
         Response response = null;
@@ -157,21 +161,24 @@ public class InfoManager {
                 .post(formBody)
                 .build();
         Response response = null;
-        userId = 0;
         try {
-            RegistrationData registrationData = CurrentUser.getInstance().getRegistrationData();
-            registrationData.setResult(false);
-
-            MyPetsData myPetsData = CurrentPet.getInstance().getMyPetsData();
-            myPetsData.setResult(false);
-
             response = client.newCall(request).execute();
 
             if(response.code() == 200) {
-                registrationData.setResult(true);
-                userId = Integer.parseInt(response.headers().values("id").get(0));
-                registrationData.setId(userId);
-                myPetsData.setResult(true);
+                Integer PetsId = CurrentPet.getInstance().size();
+                MyPetsData petsData = new MyPetsData();
+                petsData.setUserId(userId);
+                petsData.setName(name);
+                petsData.setBreed(breed);
+                petsData.setKindOfAnimal(kindOfAnimal);
+                petsData.setIdentificationSystem(identificationSystem);
+                petsData.setAddress(address);
+                petsData.setBirthday(birthday);
+                petsData.setCountryOfOrigin(countryOfOrigin);
+                petsData.setDateOfChipping(dateOfChipping);
+                petsData.setNumber(number);
+                petsData.setGender(gender);
+                CurrentPet.getInstance().addPet(PetsId, petsData);
             }
         } catch (IOException e) {
             e.printStackTrace();

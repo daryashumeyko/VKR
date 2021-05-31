@@ -26,6 +26,7 @@ import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MyPetsView extends AppCompatActivity {
 
@@ -68,10 +69,10 @@ public class MyPetsView extends AppCompatActivity {
             }
         });
 
-        MyPetsData myPetsData = CurrentPet.getInstance().getMyPetsData();
-        KindOfAnimal.setText(myPetsData.getKindOfAnimal());
-        Birthday.setText(myPetsData.getBirthday());
-        Name.setText(myPetsData.getName());
+        List<MyPetsData> myPetsData = CurrentPet.getInstance().getMyPetsData();
+        KindOfAnimal.setText(myPetsData.get(0).getKindOfAnimal());
+        Birthday.setText(myPetsData.get(0).getBirthday());
+        Name.setText(myPetsData.get(0).getName());
 
         MyPetsModel myPetsModel = new MyPetsModel();
         presenter = new MyPetsPresenter(myPetsModel);
