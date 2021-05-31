@@ -17,6 +17,7 @@ import com.example.vetsertification.ui.RegexMaskTextWatcher;
 import com.example.vetsertification.ui.mypets.MyPetsData;
 import com.example.vetsertification.ui.mypets.MyPetsModel;
 import com.example.vetsertification.ui.mypets.MyPetsPresenter;
+import com.example.vetsertification.ui.registration.RegistrationData;
 import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
@@ -111,7 +112,16 @@ public class AddPetView extends AppCompatActivity {
 
     public MyPetsData getMyPetsData() {
         MyPetsData myPetsData = new MyPetsData();
-        //myPetsData.setId(Id.getText().toString());
+        myPetsData.setBreed(Breed.getText().toString());
+        myPetsData.setIdentificationSystem(IdentificationSystem.getText().toString());
+        myPetsData.setName(Name.getText().toString());
+        myPetsData.setAddress(Address.getText().toString());
+        myPetsData.setBirthday(Birthday.getText().toString());
+        myPetsData.setCountryOfOrigin(CountryOfOrigin.getText().toString());
+        myPetsData.setDateOfChipping(DateOfChipping.getText().toString());
+        myPetsData.setGender(Gender.getText().toString());
+        myPetsData.setKindOfAnimal(KindOfAnimal.getText().toString());
+        myPetsData.setNumber(Number.getText().toString());
         return myPetsData;
     }
 

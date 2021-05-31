@@ -3,6 +3,8 @@ package com.example.vetsertification.ui.registration;
 import android.graphics.Color;
 import android.text.TextUtils;
 
+import com.example.vetsertification.ui.CurrentUser;
+
 public class RegistrationPresenter {
 
     private RegistrationView view;
@@ -45,7 +47,16 @@ public class RegistrationPresenter {
             @Override
             public void onRegister(Boolean result) {
                 view.hideProgress();
-                    view.startAccountActivity();
+                if (!result)
+                    view.showMessage("Отсутствует соединение с сервером");
+                else{
+                    Boolean requestResult = CurrentUser.getInstance().getRegistrationData().getResult();
+                    if (!requestResult)
+                        view.showMessage("");
+                    else{
+                        view.startAccountActivity();
+                    }
+                }
             };
         });
     }

@@ -2,6 +2,10 @@ package com.example.vetsertification.ui.registration;
 
 import android.os.AsyncTask;
 
+import com.example.vetsertification.api.InfoManager;
+
+import java.io.IOException;
+
 public class RegistrationModel {
 
     public void register(RegistrationData registrationData, RegistrationModel.RegisterCallback callback) {
@@ -23,6 +27,13 @@ public class RegistrationModel {
 
         @Override
         protected Boolean doInBackground(RegistrationData... params) {
+            try {
+                InfoManager.registration(params[0].getName(), params[0].getEmail(), params[0].getAddress(),
+                        params[0].getBirthday(), params[0].getPassword(), params[0].getPhone());
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
             return true;
         }
 

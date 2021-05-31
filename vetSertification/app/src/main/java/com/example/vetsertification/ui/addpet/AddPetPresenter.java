@@ -3,6 +3,7 @@ package com.example.vetsertification.ui.addpet;
 import android.text.TextUtils;
 
 import com.example.vetsertification.ui.CurrentPet;
+import com.example.vetsertification.ui.CurrentUser;
 import com.example.vetsertification.ui.mypets.MyPetsData;
 import com.example.vetsertification.ui.mypets.MyPetsModel;
 import com.example.vetsertification.ui.mypets.MyPetsView;
@@ -44,9 +45,9 @@ public class AddPetPresenter {
                 if (!result)
                     view.showMessage("Отсутствует соединение с сервером");
                 else{
-                    Boolean requestResult = CurrentPet.getInstance().getMyPetsData().getResult();
+                    Boolean requestResult = CurrentUser.getInstance().getRegistrationData().getResult();
                     if (!requestResult)
-                        view.showMessage("Неверный email или пароль");
+                        view.showMessage("");
                     else{
                         view.startPetDetails();
                     }

@@ -13,7 +13,7 @@ public class MyPetsData {
     public String dateOfChipping;
     public String kindOfAnimal;
     public String countryOfOrigin;
-    public String userId;
+    public int userId;
     private Boolean result;
 
     public Boolean getResult() {
@@ -108,15 +108,15 @@ public class MyPetsData {
         return countryOfOrigin;
     }
 
-    public void setCountryOfOrigin(String countryOfOriginId) {
+    public void setCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 }

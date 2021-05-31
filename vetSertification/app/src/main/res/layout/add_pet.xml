@@ -160,7 +160,6 @@
             android:background="@drawable/fields"
             android:padding="20sp"
             android:textColor="#817979"
-            android:inputType="textPassword"
             android:textSize="18sp"/>
 
         <TextView
@@ -183,7 +182,6 @@
             android:background="@drawable/fields"
             android:padding="20sp"
             android:textColor="#817979"
-            android:inputType="textPassword"
             android:textSize="18sp"/>
 
         <TextView
@@ -206,7 +204,6 @@
             android:background="@drawable/fields"
             android:padding="20sp"
             android:textColor="#817979"
-            android:inputType="textPassword"
             android:textSize="18sp"/>
 
         <TextView
@@ -229,7 +226,6 @@
             android:background="@drawable/fields"
             android:padding="20sp"
             android:textColor="#817979"
-            android:inputType="textPassword"
             android:textSize="18sp"/>
 
         <TextView
@@ -252,7 +248,6 @@
             android:background="@drawable/fields"
             android:padding="20sp"
             android:textColor="#817979"
-            android:inputType="textPassword"
             android:textSize="18sp"/>
 
         <TextView

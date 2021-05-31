@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.example.vetsertification.ui.CurrentPet;
 import com.example.vetsertification.ui.CurrentUser;
 import com.example.vetsertification.ui.mypets.MyPetsData;
+import com.example.vetsertification.ui.mypets.MyPetsView;
 import com.example.vetsertification.ui.registration.RegistrationData;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -57,8 +58,7 @@ public class InfoManager {
         }
     }
 
-
-        //PUT редактирование аккаунта
+    //PUT редактирование аккаунта
     public static void editAccount(String phone, String name, String address, String birthday) throws IOException {
         OkHttpClient client = new OkHttpClient();
         RequestBody formBody = new FormBody.Builder().build();
@@ -113,6 +113,72 @@ public class InfoManager {
             e.printStackTrace();
         } catch (IllegalStateException e) {
             e.printStackTrace();
+        }
+    }
+
+    //POST регистрация
+    public static void registration(String name, String birthday, String phone, String address, String email, String password) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/registration?name=" + name + "&email=" + email + "&birthday=" + birthday  + "&phone=" + phone
+                        + "&address=" + address + "&password" + password)
+                .post(formBody)
+                .build();
+        Response response = null;
+        try {
+            RegistrationData registrationData = CurrentUser.getInstance().getRegistrationData();
+            registrationData.setResult(false);
+
+            response = client.newCall(request).execute();
+
+            if(response.code() == 200) {
+                registrationData.setResult(true);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
+        }
+    }
+
+    //POST добавление животного
+    public static void addpet(Integer userId, String name, String birthday, String breed, String address, String kindOfAnimal,
+                              String identificationSystem, String countryOfOrigin, String dateOfChipping, String number,
+                              String gender) throws IOException {
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/addpet?userid=" + userId + "&name=" + name + "&breed=" + breed + "&kindofanimal=" + kindOfAnimal
+                        + "&identificationsystem=" + identificationSystem + "&address=" + address + "&birthday=" + birthday
+                        + "&countryoforigin=" + countryOfOrigin + "&dateofchipping=" + dateOfChipping + "&number=" + number+ "&gender=" + gender)
+                .post(formBody)
+                .build();
+        Response response = null;
+        userId = 0;
+        try {
+            RegistrationData registrationData = CurrentUser.getInstance().getRegistrationData();
+            registrationData.setResult(false);
+
+            MyPetsData myPetsData = CurrentPet.getInstance().getMyPetsData();
+            myPetsData.setResult(false);
+
+            response = client.newCall(request).execute();
+
+            if(response.code() == 200) {
+                registrationData.setResult(true);
+                userId = Integer.parseInt(response.headers().values("id").get(0));
+                registrationData.setId(userId);
+                myPetsData.setResult(true);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
         }
     }
 }
