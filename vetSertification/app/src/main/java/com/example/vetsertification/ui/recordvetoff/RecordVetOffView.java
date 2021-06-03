@@ -180,6 +180,12 @@ public class RecordVetOffView extends AppCompatActivity implements AdapterView.O
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), UserMainPageView.class);
+        startActivity(intent);
+    }
+
     public void showProgress() {
         progressDialog = ProgressDialog.show(this, "", "Подождите...");
     }

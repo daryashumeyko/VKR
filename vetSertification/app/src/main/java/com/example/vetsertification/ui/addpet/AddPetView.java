@@ -1,6 +1,8 @@
 package com.example.vetsertification.ui.addpet;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.RegexMaskTextWatcher;
 import com.example.vetsertification.ui.mypets.MyPetsData;
+import com.example.vetsertification.ui.mypets.MyPetsView;
+import com.example.vetsertification.ui.seeaccount.SeeAccountView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 import com.google.android.material.textfield.TextInputEditText;
@@ -139,6 +143,12 @@ public class AddPetView extends AppCompatActivity {
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MyPetsView.class);
+        startActivity(intent);
     }
 
     @Override

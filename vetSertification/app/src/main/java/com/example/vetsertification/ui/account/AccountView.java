@@ -13,6 +13,7 @@ import com.example.vetsertification.R;
 import com.example.vetsertification.ui.forgetpassword.ForgetPasswordView;
 import com.example.vetsertification.ui.mainpage.MainPagePresenter;
 import com.example.vetsertification.ui.mainpage.MainPageView;
+import com.example.vetsertification.ui.mypets.MyPetsView;
 import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 import com.google.android.material.textfield.TextInputEditText;
@@ -121,6 +122,13 @@ public class AccountView extends AppCompatActivity{
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainPageView.class);
+        startActivity(intent);
     }
 
     @Override

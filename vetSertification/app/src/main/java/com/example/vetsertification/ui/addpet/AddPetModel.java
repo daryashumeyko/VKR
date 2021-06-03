@@ -4,7 +4,6 @@ import android.os.AsyncTask;
 
 import com.example.vetsertification.api.InfoManager;
 import com.example.vetsertification.ui.mypets.MyPetsData;
-import com.example.vetsertification.ui.mypets.MyPetsModel;
 
 import java.io.IOException;
 

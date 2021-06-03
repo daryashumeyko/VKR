@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
+import com.example.vetsertification.ui.mainpage.MainPageView;
 import com.example.vetsertification.ui.userMainPage.*;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -256,6 +257,12 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), UserMainPageView.class);
+        startActivity(intent);
     }
 
     @Override

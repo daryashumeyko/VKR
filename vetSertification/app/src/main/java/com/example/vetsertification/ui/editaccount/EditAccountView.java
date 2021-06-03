@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.CurrentUser;
+import com.example.vetsertification.ui.mainpage.MainPageView;
 import com.example.vetsertification.ui.registration.RegistrationData;
 import com.example.vetsertification.ui.seeaccount.SeeAccountData;
 import com.example.vetsertification.ui.seeaccount.SeeAccountView;
@@ -116,6 +117,12 @@ public class EditAccountView extends AppCompatActivity {
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), SeeAccountView.class);
+        startActivity(intent);
     }
 
     @Override

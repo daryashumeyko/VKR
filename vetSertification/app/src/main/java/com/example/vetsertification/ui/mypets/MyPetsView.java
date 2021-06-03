@@ -20,8 +20,10 @@ import com.example.vetsertification.ui.account.AccountModel;
 import com.example.vetsertification.ui.account.AccountPresenter;
 import com.example.vetsertification.ui.addpet.AddPetView;
 import com.example.vetsertification.ui.forgetpassword.ForgetPasswordView;
+import com.example.vetsertification.ui.mainpage.MainPageView;
 import com.example.vetsertification.ui.registration.RegistrationData;
 import com.example.vetsertification.ui.registration.RegistrationView;
+import com.example.vetsertification.ui.seeaccount.SeeAccountView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
 
@@ -139,6 +141,12 @@ public class MyPetsView extends AppCompatActivity {
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), SeeAccountView.class);
+        startActivity(intent);
     }
 
     @Override
