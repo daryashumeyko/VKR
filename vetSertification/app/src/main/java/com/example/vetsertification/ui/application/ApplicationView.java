@@ -16,47 +16,48 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.userMainPage.*;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ApplicationView extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    private EditText FromCountry;
-    private EditText ToCountry;
-    private EditText DateOfExport;
+    private Spinner FromCountry;
+    private Spinner ToCountry;
+    private TextInputEditText DateOfExport;
 
-    private EditText Name;
-    private EditText Birthday;
-    private EditText Email;
-    private EditText Phone;
-    private EditText Address;
+    private TextInputEditText Name;
+    private TextInputEditText Birthday;
+    private TextInputEditText Email;
+    private TextInputEditText Phone;
+    private TextInputEditText Address;
 
-    private EditText TypeOfTransport;
-    private EditText NumberOfTransport;
+    private Spinner TypeOfTransport;
+    private TextInputEditText NumberOfTransport;
 
-    private EditText KindOfAnimal;
-    private EditText PetName;
-    private EditText Breed;
+    private TextInputEditText KindOfAnimal;
+    private TextInputEditText PetName;
+    private TextInputEditText Breed;
     //radioButtonMale;
     //radioButtonFemale;
-    private EditText PetBirthday;
-    private EditText PetAddress;
-    private EditText CountryOfOrigin;
-    private EditText IdentificationSystem;
-    private EditText DateOfChipping;
-    private EditText Number;
+    private TextInputEditText PetBirthday;
+    private TextInputEditText PetAddress;
+    private Spinner CountryOfOrigin;
+    private Spinner IdentificationSystem;
+    private TextInputEditText DateOfChipping;
+    private TextInputEditText Number;
 
-    private EditText MethodOfResearch;
-    private EditText Date;
-    private EditText NameOfDesease;
-    private EditText Result;
+    private TextInputEditText MethodOfResearch;
+    private TextInputEditText Date;
+    private TextInputEditText NameOfDesease;
+    private TextInputEditText Result;
 
-    private EditText NameOfVaccine;
-    private EditText Date2;
-    private EditText NameOfDesease2;
-    private EditText SeriesOfVaccine;
-    private EditText ShelfLifeVaccine;
+    private TextInputEditText NameOfVaccine;
+    private TextInputEditText Date2;
+    private TextInputEditText NameOfDesease2;
+    private TextInputEditText SeriesOfVaccine;
+    private TextInputEditText ShelfLifeVaccine;
 
     private TextView Message;
     private ProgressDialog progressDialog;
@@ -162,34 +163,34 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
 
     private void init() {
 
-        //FromCountry = (EditText) findViewById(R.id.fromCountry);
-        //ToCountry = (EditText) findViewById(R.id.toCountry);
-        DateOfExport = (EditText) findViewById(R.id.dateOfExport);
-        Name = (EditText) findViewById(R.id.name);
-        Birthday = (EditText) findViewById(R.id.birthday);
-        Email = (EditText) findViewById(R.id.email);
-        Phone = (EditText) findViewById(R.id.phone);
-        Address = (EditText) findViewById(R.id.address);
-        //TypeOfTransport = (EditText) findViewById(R.id.typeOfTransport);
-        NumberOfTransport = (EditText) findViewById(R.id.numberOfTransport);
-        KindOfAnimal = (EditText) findViewById(R.id.kindOfAnimal);
-        PetName = (EditText) findViewById(R.id.petName);
-        Breed = (EditText) findViewById(R.id.breed);
-        PetBirthday = (EditText) findViewById(R.id.petBirthday);
-        PetAddress = (EditText) findViewById(R.id.petAddress);
-        //CountryOfOrigin = (EditText) findViewById(R.id.countryOfOrigin);
-        //IdentificationSystem = (EditText) findViewById(R.id.identificationSystem);
-        DateOfChipping = (EditText) findViewById(R.id.dateOfChipping);
-        Number = (EditText) findViewById(R.id.number);
-        MethodOfResearch = (EditText) findViewById(R.id.methodOfResearch);
-        Date = (EditText) findViewById(R.id.date);
-        NameOfDesease = (EditText) findViewById(R.id.nameOfDesease);
-        Result = (EditText) findViewById(R.id.result);
-        NameOfVaccine = (EditText) findViewById(R.id.nameOfVaccine);
-        Date2 = (EditText) findViewById(R.id.date2);
-        NameOfDesease2 = (EditText) findViewById(R.id.nameOfDesease2);
-        SeriesOfVaccine = (EditText) findViewById(R.id.seriesOfVaccine);
-        ShelfLifeVaccine = (EditText) findViewById(R.id.shelfLifeVaccine);
+        FromCountry = (Spinner) findViewById(R.id.spinnerFromCountry);
+        ToCountry = (Spinner) findViewById(R.id.spinnerToCountry);
+        DateOfExport = (TextInputEditText) findViewById(R.id.dateOfExport);
+        Name = (TextInputEditText) findViewById(R.id.name);
+        Birthday = (TextInputEditText) findViewById(R.id.birthday);
+        Email = (TextInputEditText) findViewById(R.id.email);
+        Phone = (TextInputEditText) findViewById(R.id.phone);
+        Address = (TextInputEditText) findViewById(R.id.address);
+        TypeOfTransport = (Spinner) findViewById(R.id.spinnerTypeOfTransport);
+        NumberOfTransport = (TextInputEditText) findViewById(R.id.numberOfTransport);
+        KindOfAnimal = (TextInputEditText) findViewById(R.id.kindOfAnimal);
+        PetName = (TextInputEditText) findViewById(R.id.petName);
+        Breed = (TextInputEditText) findViewById(R.id.breed);
+        PetBirthday = (TextInputEditText) findViewById(R.id.petBirthday);
+        PetAddress = (TextInputEditText) findViewById(R.id.petAddress);
+        CountryOfOrigin = (Spinner) findViewById(R.id.spinnerCountryOfOrigin);
+        IdentificationSystem = (Spinner) findViewById(R.id.identificationSystem);
+        DateOfChipping = (TextInputEditText) findViewById(R.id.dateOfChipping);
+        Number = (TextInputEditText) findViewById(R.id.number);
+        MethodOfResearch = (TextInputEditText) findViewById(R.id.methodOfResearch);
+        Date = (TextInputEditText) findViewById(R.id.date);
+        NameOfDesease = (TextInputEditText) findViewById(R.id.nameOfDesease);
+        Result = (TextInputEditText) findViewById(R.id.result);
+        NameOfVaccine = (TextInputEditText) findViewById(R.id.nameOfVaccine);
+        Date2 = (TextInputEditText) findViewById(R.id.date2);
+        NameOfDesease2 = (TextInputEditText) findViewById(R.id.nameOfDesease2);
+        SeriesOfVaccine = (TextInputEditText) findViewById(R.id.seriesOfVaccine);
+        ShelfLifeVaccine = (TextInputEditText) findViewById(R.id.shelfLifeVaccine);
 
         findViewById(R.id.doApp).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -206,23 +207,23 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
 
     public ApplicationData getApplicationData() {
         ApplicationData applicationData = new ApplicationData();
-        applicationData.setEmail(FromCountry.getText().toString());
-        applicationData.setEmail(ToCountry.getText().toString());
+        //applicationData.setEmail(FromCountry.getText().toString());
+        //applicationData.setEmail(ToCountry.getText().toString());
         applicationData.setEmail(DateOfExport.getText().toString());
         applicationData.setEmail(Name.getText().toString());
         applicationData.setEmail(Birthday.getText().toString());
         applicationData.setEmail(Email.getText().toString());
         applicationData.setEmail(Phone.getText().toString());
         applicationData.setEmail(Address.getText().toString());
-        applicationData.setEmail(TypeOfTransport.getText().toString());
+        //applicationData.setEmail(TypeOfTransport.getText().toString());
         applicationData.setEmail(NumberOfTransport.getText().toString());
         applicationData.setEmail(KindOfAnimal.getText().toString());
         applicationData.setEmail(PetName.getText().toString());
         applicationData.setEmail(Breed.getText().toString());
         applicationData.setEmail(PetBirthday.getText().toString());
         applicationData.setEmail(PetAddress.getText().toString());
-        applicationData.setEmail(CountryOfOrigin.getText().toString());
-        applicationData.setEmail(IdentificationSystem.getText().toString());
+        //applicationData.setEmail(CountryOfOrigin.getText().toString());
+        //applicationData.setEmail(IdentificationSystem.getText().toString());
         applicationData.setEmail(DateOfChipping.getText().toString());
         applicationData.setEmail(Number.getText().toString());
         applicationData.setEmail(MethodOfResearch.getText().toString());

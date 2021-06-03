@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/colorPrimary"
@@ -14,8 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
-        android:padding="10sp"
-        android:layout_marginTop="20dp"
+        android:padding="20sp"
+        android:layout_marginTop="150dp"
         android:text="Мой аккаунт"
         android:fontFamily="casual"
         android:textStyle="bold"
@@ -29,7 +30,7 @@
         android:layout_gravity="center"
         android:background="@drawable/button"
         android:padding="10sp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="Инструкция по получению ВСД"
         android:fontFamily="casual"
         android:textStyle="bold"

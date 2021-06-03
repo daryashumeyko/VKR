@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -8,14 +13,13 @@
     android:paddingRight="15dp"
     android:layout_height="match_parent">
 
-
     <Button
         android:id="@+id/seeAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
-        android:padding="10sp"
+        android:padding="20sp"
         android:layout_marginTop="20dp"
         android:text="Мой аккаунт"
         android:fontFamily="casual"
@@ -43,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
-        android:padding="10sp"
+        android:padding="20sp"
         android:layout_marginTop="20dp"
         android:text="Заявка на получение ВСД"
         android:fontFamily="casual"
@@ -57,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
-        android:padding="10sp"
+        android:padding="5sp"
         android:layout_marginTop="20dp"
         android:text="Запись в ветеринарное управление по месту жительства"
         android:fontFamily="casual"
@@ -71,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/button"
-        android:padding="10sp"
+        android:padding="5sp"
         android:layout_marginTop="20dp"
         android:text="Запись в территориальное управление Россельхознадзора"
         android:fontFamily="casual"
@@ -80,3 +84,4 @@
         android:textSize="18sp"/>
 
 </LinearLayout>
+</ScrollView>

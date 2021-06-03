@@ -29,7 +29,7 @@
             android:id="@+id/text2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Для записи в территориальное управление Россельхознадзора выберите управление, дату и время вашего посещения из предложенного списка:"
+            android:text="Для записи в территориальное управление Россельхознадзора выберите город, управление, дату и время вашего посещения из предложенного списка:"
             android:fontFamily="casual"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -37,6 +37,33 @@
             android:layout_marginTop="20dp"
             android:textColor="#000000"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Город:"
+            android:fontFamily="casual"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/fields"
+                android:padding="20sp"
+                android:textColor="#817979"
+                android:inputType="textPassword"
+                android:textSize="18sp"
+                android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textRosselchoz"
@@ -47,22 +74,23 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:gravity="center_vertical"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/rosselchoz"
+        <Spinner
+            android:id="@+id/spinnerRosselchoz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="casual"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/fields"
-            android:padding="10sp"
+            android:padding="20sp"
             android:textColor="#817979"
             android:inputType="textPassword"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textDate"
@@ -77,18 +105,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/date"
+        <Spinner
+            android:id="@+id/spinnerDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="casual"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/fields"
-            android:padding="10sp"
+            android:padding="20sp"
             android:textColor="#817979"
             android:inputType="textPassword"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/textTime"
@@ -103,18 +132,19 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/time"
+        <Spinner
+            android:id="@+id/spinnerTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:fontFamily="casual"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/fields"
-            android:padding="10sp"
+            android:padding="20sp"
             android:textColor="#817979"
             android:inputType="textPassword"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:prompt="@string/spinner_title"/>
 
         <TextView
             android:id="@+id/message"
@@ -133,7 +163,7 @@
             android:layout_gravity="center"
             android:background="@drawable/button"
             android:padding="20sp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:text="Создать запись"
             android:fontFamily="casual"
             android:textStyle="bold"

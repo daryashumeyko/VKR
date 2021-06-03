@@ -14,10 +14,11 @@ import com.example.vetsertification.ui.mainpage.MainPagePresenter;
 import com.example.vetsertification.ui.mainpage.MainPageView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class ForgetPasswordView extends AppCompatActivity{
 
-    private EditText Email;
+    private TextInputEditText Email;
     private TextView Message;
 
     private ProgressDialog progressDialog;
@@ -32,7 +33,7 @@ public class ForgetPasswordView extends AppCompatActivity{
     }
 
     private void init() {
-        Email = (EditText) findViewById(R.id.email);
+        Email = (TextInputEditText) findViewById(R.id.email);
         findViewById(R.id.getPassword).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
