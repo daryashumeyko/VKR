@@ -16,21 +16,22 @@ import com.example.vetsertification.ui.RegexMaskTextWatcher;
 import com.example.vetsertification.ui.mypets.MyPetsData;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.IOException;
 
 public class AddPetView extends AppCompatActivity {
 
-    public EditText Breed;
-    public EditText Name;
-    public EditText Gender;
-    public EditText Birthday;
-    public EditText Address;
-    public EditText IdentificationSystem;
-    public EditText Number;
-    public EditText DateOfChipping;
-    public EditText KindOfAnimal;
-    public EditText CountryOfOrigin;
+    public TextInputEditText Breed;
+    public TextInputEditText Name;
+    public TextInputEditText Gender;
+    public TextInputEditText Birthday;
+    public TextInputEditText Address;
+    public TextInputEditText IdentificationSystem;
+    public TextInputEditText Number;
+    public TextInputEditText DateOfChipping;
+    public TextInputEditText KindOfAnimal;
+    public TextInputEditText CountryOfOrigin;
     private TextView Message;
     private ProgressDialog progressDialog;
 
@@ -49,18 +50,18 @@ public class AddPetView extends AppCompatActivity {
 
     private void init() throws IOException {
 
-        Name = (EditText) findViewById(R.id.name);
-        KindOfAnimal = (EditText) findViewById(R.id.kindOfAnimal);
-        Breed = (EditText) findViewById(R.id.breed);
-        Address = (EditText) findViewById(R.id.address);
-        Birthday = (EditText) findViewById(R.id.birthday);
+        Name = (TextInputEditText) findViewById(R.id.name);
+        KindOfAnimal = (TextInputEditText) findViewById(R.id.kindOfAnimal);
+        Breed = (TextInputEditText) findViewById(R.id.breed);
+        Address = (TextInputEditText) findViewById(R.id.address);
+        Birthday = (TextInputEditText) findViewById(R.id.birthday);
         Birthday.addTextChangedListener(new RegexMaskTextWatcher(Birthday, "(0?[1-9]|[12][0-9]|3[01])([\\.\\\\\\/-])(0?[1-9]|1[012])\\2(((19|20)\\d\\d)|(\\d\\d))"));
-        CountryOfOrigin = (EditText) findViewById(R.id.countryOfOrigin);
-        IdentificationSystem = (EditText) findViewById(R.id.identificationSystem);
-        Number = (EditText) findViewById(R.id.number);
-        DateOfChipping = (EditText) findViewById(R.id.dateOfChipping);
+        CountryOfOrigin = (TextInputEditText) findViewById(R.id.countryOfOrigin);
+        IdentificationSystem = (TextInputEditText) findViewById(R.id.identificationSystem);
+        Number = (TextInputEditText) findViewById(R.id.number);
+        DateOfChipping = (TextInputEditText) findViewById(R.id.dateOfChipping);
         DateOfChipping.addTextChangedListener(new RegexMaskTextWatcher(DateOfChipping, "(0?[1-9]|[12][0-9]|3[01])([\\.\\\\\\/-])(0?[1-9]|1[012])\\2(((19|20)\\d\\d)|(\\d\\d))"));
-        Gender = (EditText) findViewById(R.id.gender);
+        Gender = (TextInputEditText) findViewById(R.id.gender);
 
         findViewById(R.id.addpet).setOnClickListener(new View.OnClickListener() {
             @Override

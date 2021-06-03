@@ -14,15 +14,16 @@ import com.example.vetsertification.ui.account.AccountView;
 import com.example.vetsertification.ui.mainpage.MainPageView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class RegistrationView extends AppCompatActivity {
 
-    private EditText Email;
-    private EditText Name;
-    private EditText Address;
-    private EditText Phone;
-    private EditText Birthday;
-    private EditText Password;
+    private TextInputEditText Email;
+    private TextInputEditText Name;
+    private TextInputEditText Address;
+    private TextInputEditText Phone;
+    private TextInputEditText Birthday;
+    private TextInputEditText Password;
     private TextView Message;
     private ProgressDialog progressDialog;
 
@@ -37,14 +38,14 @@ public class RegistrationView extends AppCompatActivity {
 
     private void init() {
 
-        Email = (EditText) findViewById(R.id.email);
+        Email = (TextInputEditText) findViewById(R.id.email);
         Email.addTextChangedListener(new RegexMaskTextWatcher(Email, "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}\\@[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}(\\.[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25})+"));
-        Password = (EditText) findViewById(R.id.password);
-        Name = (EditText) findViewById(R.id.name);
-        Address = (EditText) findViewById(R.id.address);
-        Birthday = (EditText) findViewById(R.id.birthday);
+        Password = (TextInputEditText) findViewById(R.id.password);
+        Name = (TextInputEditText) findViewById(R.id.name);
+        Address = (TextInputEditText) findViewById(R.id.address);
+        Birthday = (TextInputEditText) findViewById(R.id.birthday);
         Birthday.addTextChangedListener(new RegexMaskTextWatcher(Birthday, "(0?[1-9]|[12][0-9]|3[01])([\\.\\\\\\/-])(0?[1-9]|1[012])\\2(((19|20)\\d\\d)|(\\d\\d))"));
-        Phone = (EditText) findViewById(R.id.phone);
+        Phone = (TextInputEditText) findViewById(R.id.phone);
         Phone.addTextChangedListener(new RegexMaskTextWatcher(Phone, "((8|\\+7))?(\\(?\\d{3}\\)?)?[\\d\\- ]{8,15}$"));
 
         findViewById(R.id.register).setOnClickListener(new View.OnClickListener() {

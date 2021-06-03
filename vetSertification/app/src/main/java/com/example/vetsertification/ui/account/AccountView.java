@@ -15,11 +15,12 @@ import com.example.vetsertification.ui.mainpage.MainPagePresenter;
 import com.example.vetsertification.ui.mainpage.MainPageView;
 import com.example.vetsertification.ui.registration.RegistrationView;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class AccountView extends AppCompatActivity{
 
-    private EditText Email;
-    private EditText Password;
+    private TextInputEditText Email;
+    private TextInputEditText Password;
     private TextView Message;
     private ProgressDialog progressDialog;
 
@@ -55,8 +56,8 @@ public class AccountView extends AppCompatActivity{
 
     private void init() {
 
-        Email = (EditText) findViewById(R.id.email);
-        Password = (EditText) findViewById(R.id.password);
+        Email = (TextInputEditText) findViewById(R.id.email);
+        Password = (TextInputEditText) findViewById(R.id.password);
 
         findViewById(R.id.signIn).setOnClickListener(new View.OnClickListener() {
             @Override

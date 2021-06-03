@@ -25,230 +25,225 @@
             android:textColor="#000000"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textName"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Кличка:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Кличка*">
 
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20sp"
-            android:fontFamily="casual"
-            android:ems="10"
-            android:layout_marginTop="10dp"
-            android:textColor="#817979"
-            android:background="@drawable/fields"
-            android:inputType="text"
-            android:textSize="18sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textKindOfAnimal"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Вид животного:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Вид животного*">
 
-        <EditText
-            android:id="@+id/kindOfAnimal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20sp"
-            android:fontFamily="casual"
-            android:ems="10"
-            android:layout_marginTop="10dp"
-            android:textColor="#817979"
-            android:background="@drawable/fields"
-            android:inputType="text"
-            android:textSize="18sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/kindOfAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textBreed"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Порода:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Порода*">
 
-        <EditText
-            android:id="@+id/breed"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20sp"
-            android:fontFamily="casual"
-            android:ems="10"
-            android:layout_marginTop="10dp"
-            android:textColor="#817979"
-            android:background="@drawable/fields"
-            android:inputType="text"
-            android:textSize="18sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/breed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textGender"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Пол:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Пол*">
 
-        <EditText
-            android:id="@+id/gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20sp"
-            android:fontFamily="casual"
-            android:ems="10"
-            android:layout_marginTop="10dp"
-            android:textColor="#817979"
-            android:background="@drawable/fields"
-            android:inputType="text"
-            android:textSize="18sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textBirthday"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Дата рождения:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Дата рождения*">
 
-        <EditText
-            android:id="@+id/birthday"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20sp"
-            android:fontFamily="casual"
-            android:ems="10"
-            android:layout_marginTop="10dp"
-            android:textColor="#817979"
-            android:background="@drawable/fields"
-            android:inputType="text"
-            android:textSize="18sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textAddress"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Адрес:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Адрес*">
 
-        <EditText
-            android:id="@+id/address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="casual"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fields"
-            android:padding="20sp"
-            android:textColor="#817979"
-            android:textSize="18sp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textCountryOfOrigin"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Страна происхождения:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Страна происхождения*">
 
-        <EditText
-            android:id="@+id/countryOfOrigin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="casual"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fields"
-            android:padding="20sp"
-            android:textColor="#817979"
-            android:textSize="18sp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/countryOfOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textIdentificationSystem"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Система идентификации:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Система идентификации*">
 
-        <EditText
-            android:id="@+id/identificationSystem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="casual"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fields"
-            android:padding="20sp"
-            android:textColor="#817979"
-            android:textSize="18sp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/identificationSystem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textNumber"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Номер:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Номер*">
 
-        <EditText
-            android:id="@+id/number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="casual"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fields"
-            android:padding="20sp"
-            android:textColor="#817979"
-            android:textSize="18sp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textDateOfChipping"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Дата чипирования / клеймения:*"
-            android:fontFamily="casual"
-            android:layout_marginTop="3dp"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:layout_margin="4dp"
+            android:textSize="18sp"
+            android:hint="Дата чипирования / клеймения*">
 
-        <EditText
-            android:id="@+id/dateOfChipping"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="casual"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fields"
-            android:padding="20sp"
-            android:textColor="#817979"
-            android:textSize="18sp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateOfChipping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="20sp"
+                android:fontFamily="casual"
+                android:ems="10"
+                android:layout_marginTop="10dp"
+                android:textColor="#817979"
+                android:textSize="18sp"
+                android:background="@drawable/fields"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/message"

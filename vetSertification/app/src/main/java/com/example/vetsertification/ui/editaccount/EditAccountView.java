@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.vetsertification.R;
@@ -16,15 +15,16 @@ import com.example.vetsertification.ui.seeaccount.SeeAccountData;
 import com.example.vetsertification.ui.seeaccount.SeeAccountView;
 import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
 import com.example.vetsertification.ui.userMainPage.UserMainPageView;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class EditAccountView extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
     private EditAccountPresenter presenter;
-    private EditText Phone;
-    private EditText Birthday;
-    private EditText Address;
-    private EditText Name;
+    private TextInputEditText Phone;
+    private TextInputEditText Birthday;
+    private TextInputEditText Address;
+    private TextInputEditText Name;
     private TextView Message;
 
     @Override
@@ -35,10 +35,10 @@ public class EditAccountView extends AppCompatActivity {
     }
 
     private void init() {
-        Phone = (EditText) findViewById(R.id.phone);
-        Birthday = (EditText) findViewById(R.id.birthday);
-        Address = (EditText) findViewById(R.id.address);
-        Name = (EditText) findViewById(R.id.name);
+        Phone = (TextInputEditText) findViewById(R.id.phone);
+        Birthday = (TextInputEditText) findViewById(R.id.birthday);
+        Address = (TextInputEditText) findViewById(R.id.address);
+        Name = (TextInputEditText) findViewById(R.id.name);
 
         findViewById(R.id.saveAccount).setOnClickListener(new View.OnClickListener() {
             @Override
