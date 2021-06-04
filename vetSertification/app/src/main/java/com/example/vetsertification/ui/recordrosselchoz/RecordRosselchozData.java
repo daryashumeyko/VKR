@@ -6,8 +6,17 @@ import java.util.Date;
 public class RecordRosselchozData {
 
     private String rosselchoz;
+    private String city;
     private Date date;
     private Time time;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public String getRosselchoz() {
         return rosselchoz;

@@ -1,12 +1,8 @@
 package com.example.vetsertification.ui.addpet;
 
 import android.text.TextUtils;
-
-import com.example.vetsertification.ui.CurrentPet;
 import com.example.vetsertification.ui.CurrentUser;
 import com.example.vetsertification.ui.mypets.MyPetsData;
-import com.example.vetsertification.ui.mypets.MyPetsModel;
-import com.example.vetsertification.ui.mypets.MyPetsView;
 
 public class AddPetPresenter {
     private AddPetView view;

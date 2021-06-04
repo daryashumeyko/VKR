@@ -1,10 +1,8 @@
 package com.example.vetsertification.ui.addpet;
 
 import android.os.AsyncTask;
-
 import com.example.vetsertification.api.InfoManager;
 import com.example.vetsertification.ui.mypets.MyPetsData;
-
 import java.io.IOException;
 
 public class AddPetModel {
@@ -18,9 +16,7 @@ public class AddPetModel {
     }
 
     static class AddPetTask extends AsyncTask<MyPetsData, Void, Boolean> {
-
         private final AddPetModel.AddPetCallback callback;
-
         AddPetTask(AddPetModel.AddPetCallback callback) {
             this.callback = callback;
         }

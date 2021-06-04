@@ -1,6 +1,8 @@
 package com.example.vetsertification.ui.application;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -208,7 +210,7 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
 
     public ApplicationData getApplicationData() {
         ApplicationData applicationData = new ApplicationData();
-        //applicationData.setEmail(FromCountry.getText().toString());
+        //applicationData.setEmail(FromCountry.getItemAtPosition().toString());
         //applicationData.setEmail(ToCountry.getText().toString());
         applicationData.setEmail(DateOfExport.getText().toString());
         applicationData.setEmail(Name.getText().toString());
@@ -247,6 +249,9 @@ public class ApplicationView extends AppCompatActivity implements AdapterView.On
     public void startUserMainActivity(){
         Intent intent = new Intent(this, UserMainPageView.class);
         startActivity(intent);
+        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Заявка на получение ВСД")
+                .setMessage("Заявка успешно создана")
+                .setPositiveButton("Ок", null).show();
     }
 
     public void showProgress() {

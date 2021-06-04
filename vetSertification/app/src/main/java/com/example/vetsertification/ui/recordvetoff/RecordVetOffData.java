@@ -6,6 +6,7 @@ import java.util.Date;
 public class RecordVetOffData {
 
     private String vetOff;
+    private String city;
     private Date date;
     private Time time;
 
@@ -15,6 +16,14 @@ public class RecordVetOffData {
 
     public void setVetOff(String vetOff) {
         this.vetOff = vetOff;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public Date getDate() {

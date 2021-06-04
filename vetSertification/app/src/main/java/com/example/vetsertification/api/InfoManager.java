@@ -2,6 +2,8 @@ package com.example.vetsertification.api;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.sql.Time;
+import java.util.Date;
 import java.util.List;
 
 import com.example.vetsertification.ui.CurrentPet;
@@ -188,4 +190,152 @@ public class InfoManager {
             return;
         }
     }
+
+    //POST добавление заявки
+    public static void addapplication(String fromCountry, String toCountry, Date dateOfExport, String name, Date birthday,
+    String email, String phone, String address, String typeOfTransport, String numberOfTransport, String kindOfAnimal,
+    String petName, String breed, Date petBirthday, String petAddress, String countryOfOrigin, String identificationSystem,
+    Date dateOfChipping, String number, String methodOfResearch, Date date, String nameOfDesease, String result,
+    String nameOfVaccine, Date date2, String nameOfDesease2, String seriesOfVaccine, Date shelfLifeVaccine)throws IOException{
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/addapplication?fromcountry=" + fromCountry + "&tocountry=" + toCountry + "&dateofexport=" +
+                        dateOfExport + "&name=" + name + "&birthday=" + birthday + "&email=" + email +
+                        "&phone=" + phone + "&address=" + address + "&typeoftransport=" + typeOfTransport +
+                        "&numberoftransport=" + numberOfTransport + "&kindofanimal=" + kindOfAnimal + "&petname=" + petName +
+                        "&breed=" + breed +"&petbirthday=" + petBirthday + "&petaddress=" + petAddress + "&countryoforigin=" + countryOfOrigin +
+                        "&identificationsystem=" + identificationSystem + "&dateofchipping=" + dateOfChipping + "&number=" + number +
+                        "&methodofresearch=" + methodOfResearch + "&result=" + result + "&date=" + date + "&nameofdesease=" + nameOfDesease +
+                        "&nameofvaccine=" + nameOfVaccine + "&date2=" + date2 + "&nameofdesease2=" + nameOfDesease2
+                        + "&seriesofvaccine=" + seriesOfVaccine + "&shelflifevaccine=" + shelfLifeVaccine )
+                .post(formBody)
+                .build();
+        Response response = null;
+        try {
+            response = client.newCall(request).execute();
+            if(response.code() == 200) {
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
+        }
+    }
+
+    //POST добавление лабораторного исследования
+    public static void addlabresearch(String methodOfResearch, Date date, String nameOfDesease, String result)throws IOException{
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/addlabresearch?methodofresearch=" + methodOfResearch +
+                        "&result=" + result + "&date=" + date + "&nameofdesease=" + nameOfDesease )
+                .post(formBody)
+                .build();
+        Response response = null;
+        try {
+            response = client.newCall(request).execute();
+            if(response.code() == 200) {
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
+        }
+    }
+
+    //POST добавление вакцины
+    public static void addvaccination (String nameOfVaccine, Date date2, String nameOfDesease2, String seriesOfVaccine, Date shelfLifeVaccine){
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/addvaccination?date2=" + date2 + "&nameofdesease2=" + nameOfDesease2
+                + "&seriesofvaccine=" + seriesOfVaccine + "&shelflifevaccine=" + shelfLifeVaccine)
+                .post(formBody)
+                .build();
+        Response response = null;
+        try {
+            response = client.newCall(request).execute();
+            if(response.code() == 200) {
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
+        }
+    }
+
+    //POST добавление записи в управление Россельхознадзора
+    public static void addrectorosselchoz(String rosselchoz, String city, Date date, Time time)throws IOException{
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/addrectorosselchoz?rosselchoz=" + rosselchoz + "&city=" + city
+                        + "&date=" + date + "&time=" + time)
+                .post(formBody)
+                .build();
+        Response response = null;
+        try {
+            response = client.newCall(request).execute();
+            if(response.code() == 200) {
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
+        }
+    }
+
+    //POST добавление записи в ветеринарное управление
+    public static void addrectovetoff (String vetoff, String city, Date date, Time time)throws IOException{
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/addrectovetoff?vetoff=" + vetoff + "&city=" + city
+                        + "&date=" + date + "&time=" + time)
+                .post(formBody)
+                .build();
+        Response response = null;
+        try {
+            response = client.newCall(request).execute();
+            if(response.code() == 200) {
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
+        }
+    }
+
+    //PUT редактирование животного
+    public static void editpet (Integer userId, String name, String birthday, String breed, String address, String kindOfAnimal,
+    String identificationSystem, String countryOfOrigin, String dateOfChipping, String number,
+    String gender)throws IOException{
+        OkHttpClient client = new OkHttpClient();
+        RequestBody formBody = new FormBody.Builder().build();
+        Request request = new Request.Builder()
+                .url(httpAddress + "/addpet?userid=" + userId + "&name=" + name + "&breed=" + breed + "&kindofanimal=" + kindOfAnimal
+                        + "&identificationsystem=" + identificationSystem + "&address=" + address + "&birthday=" + birthday
+                        + "&countryoforigin=" + countryOfOrigin + "&dateofchipping=" + dateOfChipping + "&number=" + number+ "&gender=" + gender)
+                .put(formBody)
+                .build();
+        Response response = null;
+        try {
+
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return;
+        }
+    }
+
 }

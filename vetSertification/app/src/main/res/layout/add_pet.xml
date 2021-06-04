@@ -29,8 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:textSize="18sp"
-            android:hint="Кличка*">
+            android:textSize="18sp" android:hint="Кличка*">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name"

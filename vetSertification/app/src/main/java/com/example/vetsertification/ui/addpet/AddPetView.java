@@ -1,25 +1,17 @@
 package com.example.vetsertification.ui.addpet;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.vetsertification.R;
 import com.example.vetsertification.ui.RegexMaskTextWatcher;
-import com.example.vetsertification.ui.mypets.MyPetsData;
-import com.example.vetsertification.ui.mypets.MyPetsView;
-import com.example.vetsertification.ui.seeaccount.SeeAccountView;
-import com.example.vetsertification.ui.userMainPage.UserMainPagePresenter;
-import com.example.vetsertification.ui.userMainPage.UserMainPageView;
+import com.example.vetsertification.ui.mypets.*;
+import com.example.vetsertification.ui.userMainPage.*;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.IOException;
